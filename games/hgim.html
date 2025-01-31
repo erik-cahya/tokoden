@@ -1,0 +1,826 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>HGI MASAL - Tokoden</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap">
+
+        <link rel="shortcut icon" href="../assets/images/1738000059_80ba666e578a141036ef.png" type="image/x-icon">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/enivay.css">
+        
+        <style>
+            @media (min-width: 1400px) {
+                .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+                    max-width: 1080px;
+                    padding: 0 20px;
+                }
+            }
+            @media (max-width: 991px) {
+                .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+                    padding: 0 14px;
+                }
+                .table-responsive {
+                    overflow-x: auto;
+                }
+                .eniv-variasi-blur {
+                    transform: none;
+                    width: 100%;
+                    max-width: 400px;
+                }
+                .eniv-navbar-top-start {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+                .eniv-banner {
+                    margin-bottom: 20px;
+                }
+                .eniv-games-popular a h1 {
+                    font-size: 14px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    margin-bottom: 4px;
+                }
+                .eniv-games-popular a h2 {
+                    font-size: 14px;
+                    background: var(--primary);
+                    top: 0;
+                    right: 0;
+                    padding: 2px 2px 4px 4px;
+                    border-radius: 0 0 0 12px;
+                }
+                .eniv-games-popular a img {
+                    height: 52px;
+                }
+                .eniv-games-popular {
+                    margin-bottom: 10px;
+                    max-height: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                }
+                .eniv-games-popular a {
+                    gap: 10px;
+                    margin-bottom: 0;
+                    width: calc(50% - 5px);
+                }
+                .eniv-category::-webkit-scrollbar {
+                    width: 0;
+                }
+                .eniv-navbar-end-profile span {
+                    display: none;
+                }
+                .eniv-navbar-center .eniv-navbar-center-brand {
+                    display: grid;
+                }
+                .eniv-navbar-center .eniv-navbar-center-menu {
+                    display: none;
+                }
+                .d-none-mobile {
+                    display: none !important;
+                }
+                .eniv-navbar-start .eniv-navbar-start-brand {
+                    display: none;
+                }
+                .eniv-navbar-start .eniv-navbar-start-toggle {
+                    display: block;
+                }
+                .eniv-games {
+                    gap: 10px;
+                    justify-content: flex-start;
+                }
+                .eniv-games a {
+                    padding: 12px;
+                    width: calc(33% - 6px);
+                }
+                .eniv-games a h1 {
+                    font-size: 13px;
+                    line-height: 18px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+                .eniv-games a span {
+                    font-size: 12px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+                .eniv-page p {
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+                .eniv-flash-sale-head {
+                    gap: 10px;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+                .eniv-content {
+                    padding: 30px 0;
+                }
+                .eniv-footer-method {
+                    display: none;
+                }
+                .eniv-footer-menu {
+                    margin-bottom: 30px;
+                }
+                .eniv-footer-copyright {
+                    display: none;
+                }
+                .eniv-footer-copyright-mobile {
+                    display: block;
+                }
+                .eniv-space .eniv-games-list:last-child {
+                    margin-bottom: 0;
+                }
+                .d-none-pc {
+                    display: block;
+                }
+                .eniv-games-banner-content {
+                    padding: 20px;
+                    align-items: flex-start;
+                }
+                .eniv-games-banner-content h1 {
+                    font-size: 16px;
+                }
+                .eniv-games-logo {
+                    height: 84px;
+                }
+                .eniv-games-banner-content ul li {
+                    white-space: nowrap;
+                }
+                .eniv-games-banner-content ul {
+                    gap: 14px;
+                    flex-wrap: wrap;
+                }
+                .eniv-games-banner-content span {
+                    margin-bottom: 16px;
+                }
+                .eniv-card-games {
+                    gap: 12px;
+                }
+                .eniv-card-games-left {
+                    width: 46px;
+                }
+                .eniv-card-games-left span {
+                    height: 46px;
+                    position: relative;
+                    margin-top: -20px;
+                }
+                .eniv-card-games-title {
+                    font-size: 16px;
+                    height: 46px;
+                }
+                .eniv-card-games-right {
+                    width: calc(100% - 58px);
+                }
+                .eniv-card-games-right .card {
+                    margin-left: -58px;
+                    width: calc(100% + 58px);
+                }
+                .eniv-card-games-right .eniv-category,
+                .eniv-card-games-right .eniv-product-list  {
+                    margin-left: -58px;
+                    width: calc(100% + 58px);
+                }
+                .eniv-card-games-right .eniv-method-main {
+                    margin-left: -58px;
+                    width: calc(100% + 58px);
+                }
+                .eniv-card-games-right .eniv-card-games-title {
+                    margin-bottom: 22px;
+                }
+                .eniv-card-games-right .accordion {
+                    margin-left: -58px;
+                    width: calc(100% + 58px);
+                }
+                .eniv-card-games-right .btn#btn-confirm {
+                    margin-left: -58px;
+                    width: calc(100% + 58px) !important;
+                }
+                .eniv-product-list {
+                    gap: 12px;
+                }
+                .eniv-product {
+                    padding: 8px;
+                    width: calc(50% - 6px);
+                }
+                .eniv-product p {
+                    line-height: 20px;
+                }
+                .eniv-product img {
+                    height: 40px;
+                }
+                .accordion-body .eniv-method {
+                    padding: 12px 14px;
+                    flex-direction: column-reverse;
+                    gap: 16px;
+                    align-items: flex-start;
+                }
+                #accordionMethod .accordion-body .row .col-6:nth-child(odd) {
+                    padding-right: 7px;
+                }
+                #accordionMethod .accordion-body .row .col-6:nth-child(even) {
+                    padding-left: 7px;
+                }
+                .eniv-auth {
+                    padding: 20px 0;
+                    flex-direction: column;
+                }
+                .eniv-auth-end {
+                    width: 100%;
+                }
+                .eniv-auth-start {
+                    width: 100%;
+                }
+                .eniv-auth-end, .eniv-banner-auth .item {
+                    height: 468px;
+                }
+                .eniv-faq-body {
+                    margin-bottom: 60px;
+                }
+                .eniv-faq-item-header {
+                    padding: 16px 0;
+                }
+                .eniv-card-users {
+                    margin-bottom: 40px;
+                }
+                .eniv-admin-menu {
+                    display: none;
+                    opacity: 0;
+                    flex-direction: column;
+                    gap: 12px;
+                    position: absolute;
+                    top: 21px;
+                    z-index: 10000;
+                    left: 0;
+                    right: 0;
+                }
+                .eniv-navbar-admin-toggle {
+                    display: block;
+                }
+                div.eniv-admin-item:hover ul {
+                    padding-top: 6px;
+                    width: calc(100% - 50px);
+                }
+                .eniv-games-target-right {
+                    position: absolute;
+                    top: -70px;
+                    right: 0;
+                }
+                .eniv-navbar-center-menu-mobile {
+                    
+                }
+            }
+            @media (max-width: 767px) {
+                .eniv-orders-games {
+                    flex-direction: column;
+                    gap: 20px;
+                }
+                .eniv-orders-games-card {
+                    width: 100%;
+                }
+            }
+        </style>
+
+                            
+    </head>
+    <body>
+        <div class="eniv-screenoff"></div>
+        <div class="eniv-variasi-blur"></div>
+        <div class="eniv-navbar-top">
+            <div class="container">
+                <div class="eniv-navbar-top-content">
+                    <div class="eniv-navbar-top-start"></div>
+                    <div class="eniv-navbar-top-end">
+                                            </div>
+                </div>
+            </div>
+        </div>
+        <div class="eniv-navbar">
+            <div class="container">
+                <div class="eniv-navbar-content">
+                    <div class="eniv-navbar-start">
+                        <a href="../index.html" class="eniv-navbar-start-brand">
+                            <img src="../assets/images/1738000049_1b486829364bfa9d672a.png" alt="">
+                        </a>
+                        <div class="eniv-navbar-start-toggle">
+                            <img src="../assets/images/menu.svg" alt="">
+                        </div>
+                                            </div>
+                    <div class="eniv-navbar-center">
+                        <div class="eniv-navbar-center-brand">
+                            <a href="../index.html">
+                                <img src="../assets/images/1738000049_1b486829364bfa9d672a.png" alt="">
+                            </a>
+                        </div>
+                        <div class="eniv-navbar-center-menu">
+                            <a href="../index.html" class="">Beranda</a>
+                            <a href="../orders.html" class="">Cek Pesanan</a>
+                            <a href="../price.html" class="">Daftar Harga</a>
+                        </div>
+                    </div>
+                    <div class="eniv-navbar-end">
+                                                <a href="../login.html" class="d-none-pc p-2">
+                            <img src="../assets/images/login.png" alt="" height="20">
+                        </a>
+                        <a class="eniv-navbar-end-btn d-none-mobile" href="../login.html"><i class="fa fa-sign-in-alt"></i>Login</a>
+                        <a class="eniv-navbar-end-btn d-none-mobile" href="../register.html"><i class="fa fa-user-plus"></i>Register</a>
+                                            </div>
+                </div>
+                <div class="eniv-navbar-center-menu-mobile">
+                    <a href="../index.html" class="">
+                        <img src="../assets/images/menu/home.png" alt="">
+                        Beranda
+                    </a>
+                    <a href="../orders.html" class="">
+                        <img src="../assets/images/menu/orders.png" alt="">
+                        Cek Pesanan
+                    </a>
+                    <a href="../price.html" class="">
+                        <img src="../assets/images/menu/price.png" alt="">
+                        Daftar Harga
+                    </a>
+                    <a href="../review.html" class="">
+                        <img src="../assets/images/menu/review.png" alt="">
+                        Review
+                    </a>
+                    <a href="../calculator.html" class="">
+                        <img src="../assets/images/menu/calculator.png" alt="">
+                        Kalkulator ML
+                    </a>
+                    <a href="../help.html" class="">
+                        <img src="../assets/images/menu/help.png" alt="">
+                        Hubungi Kami
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="eniv-body">
+            <div class="container">
+                <div class="eniv-content">
+                                        <div class="eniv-games-detail">
+                        <img src="../assets/images/games/banner/1738085838_f038413025349932aa76.jpg" alt="" class="eniv-games-banner">
+                        <div class="eniv-games-banner-content">
+                            <img src="../assets/images/games/1738085838_f57d7a5363a7c06de0ca.png" alt="" class="eniv-games-logo">
+                            <div>
+                                <h1>HGI MASAL</h1>
+                                <span>HGI MASAL</span>
+                                <ul>
+                                                                        <li>
+                                        <img src="../assets/images/games/tag/1732864730_8c8da6c0481763305780.png" alt="">
+                                        Layanan Resmi                                    </li>
+                                                                        <li>
+                                        <img src="../assets/images/games/tag/1732864574_2265532eca7ac3f8e983.png" alt="">
+                                        Proses Instant                                    </li>
+                                                                        <li>
+                                        <img src="../assets/images/games/tag/1732864433_54cde6ce25815994a400.png" alt="">
+                                        Topup Aman                                    </li>
+                                                                        <li>
+                                        <img src="../assets/images/games/tag/1732864501_c3f10263eaa901f512ac.png" alt="">
+                                        Layanan Pelanggan 24/7                                    </li>
+                                                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="eniv-space">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                                                <div class="eniv-space d-none-pc">
+                                    <div class="eniv-games-deskripsi-btn" data-bs-toggle="collapse" data-bs-target="#collapseDeskripsi" aria-expanded="true" aria-controls="collapseDeskripsi">
+                                        Deskripsi
+                                        <i class="fa fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse show" id="collapseDeskripsi">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                .                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                <form action="" method="POST" id="form-order">
+                                    <input type="hidden" name="product" value="0">
+                                    <input type="hidden" name="method" value="0">
+                                    <div class="eniv-card-games">
+                                        <div class="eniv-card-games-left">
+                                            <span>
+                                                <img src="../assets/images/games/section/1.png" alt="">
+                                            </span>
+                                        </div>
+                                        <div class="eniv-card-games-right">
+                                                                                        <h1 class="eniv-card-games-title">Pilih Nominal</h1>
+                                            <div class="eniv-category">
+                                                                                                <span class="active" data-id="19">Coins</span>
+
+                                                                                            </div>
+                                                                                        <div class="eniv-product-list " id="category-19">
+                                                                                                <div class="eniv-product" id="product-204" onclick="product('204');">
+                                                                                                        <img src="../assets/images/product/icon/1738002991_cd1b391a0005644596b2.png" alt="">
+                                                                                                        <p>1M MD</p>
+                                                    <div class="eniv-product-price">
+                                                                                                                <h1>Rp 299</h1>
+                                                                                                            </div>
+                                                </div>
+                                                                                                <div class="eniv-product" id="product-202" onclick="product('202');">
+                                                                                                        <img src="../assets/images/product/icon/1738002875_9f68770b63d9e204669b.png" alt="">
+                                                                                                        <p>VIP 5K + 30M Koin</p>
+                                                    <div class="eniv-product-price">
+                                                                                                                <h1>Rp 4.600</h1>
+                                                                                                            </div>
+                                                </div>
+                                                                                                <div class="eniv-product" id="product-192" onclick="product('192');">
+                                                                                                        <img src="../assets/images/product/icon/1738002875_9f68770b63d9e204669b.png" alt="">
+                                                                                                        <p>VIP 10K + 60M Koin</p>
+                                                    <div class="eniv-product-price">
+                                                                                                                <h1>Rp 9.199</h1>
+                                                                                                            </div>
+                                                </div>
+                                                                                                <div class="eniv-product" id="product-196" onclick="product('196');">
+                                                                                                        <img src="../assets/images/product/icon/1738002875_9f68770b63d9e204669b.png" alt="">
+                                                                                                        <p>VIP 30K + 200M Koin</p>
+                                                    <div class="eniv-product-price">
+                                                                                                                <h1>Rp 27.600</h1>
+                                                                                                            </div>
+                                                </div>
+                                                                                                <div class="eniv-product" id="product-205" onclick="product('205');">
+                                                                                                        <img src="../assets/images/product/icon/1738002875_9f68770b63d9e204669b.png" alt="">
+                                                                                                        <p>VIP 50K + 320M Koin </p>
+                                                    <div class="eniv-product-price">
+                                                                                                                <h1>Rp 45.999</h1>
+                                                                                                            </div>
+                                                </div>
+                                                                                                <div class="eniv-product" id="product-189" onclick="product('189');">
+                                                                                                        <img src="../assets/images/product/icon/1738002875_9f68770b63d9e204669b.png" alt="">
+                                                                                                        <p>VIP 250K + 2B Koin</p>
+                                                    <div class="eniv-product-price">
+                                                                                                                <h1>Rp 229.999</h1>
+                                                                                                            </div>
+                                                </div>
+                                                                                                <div class="text-center w-100 mt-3">
+                                                    <button class="btn btn-primary load-more" type="button">Selengkapnya</button>
+                                                </div>
+                                            </div>
+                                                                                                                                </div>
+                                    </div>
+                                                                        <div class="eniv-card-games" id="section-target">
+                                        <div class="eniv-card-games-left">
+                                            <span>
+                                                <img src="../assets/images/games/section/2.png" alt="">
+                                            </span>
+                                        </div>
+                                        <div class="eniv-card-games-right">
+                                            <h1 class="eniv-card-games-title">Masukan ID Akun</h1>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                                                                        <div class="mb-3">
+                                                        <textarea class="form-control eniv-form-multi-target" rows="4" name="target[]" placeholder="Masukan ID per baris"></textarea>
+                                                    </div>
+                                                                                                        <small>Silahkan masukan 1 baris untuk 1 target, 
+<br>contoh : 
+<br>12345
+<br>12345
+<br>12345</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="eniv-card-games">
+                                        <div class="eniv-card-games-left">
+                                            <span>
+                                                <img src="../assets/images/games/section/3.png" alt="">
+                                            </span>
+                                        </div>
+                                        <div class="eniv-card-games-right">
+                                            <h1 class="eniv-card-games-title">Metode Pembayaran</h1>
+                                                                                        <div class="eniv-method-main eniv-method" id="method-19" onclick="method('19');">
+                                                <div>
+                                                    <h1>TD CASH</h1>
+                                                    <img src="../assets/images/method/1738000754_6e19a1401bdd423401fc.png" alt="">
+                                                </div>
+                                                <p>Rp 0</p>
+                                            </div>
+                                                                                        <div class="accordion" id="accordionMethod">
+                                                                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed method-category-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+                                                            Transfer Bank                                                            <span>Rp 0</span>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapse-3" class="accordion-collapse collapse" data-bs-parent="#accordionMethod">
+                                                        <div class="accordion-body">
+                                                            <div class="row">
+                                                                                                                                <div class="col-6">
+                                                                    <div class="eniv-method" id="method-22" onclick="method('22');">
+                                                                        <div>
+                                                                            <h1>Seabank</h1>
+                                                                            <p>Rp 0</p>
+                                                                        </div>
+                                                                        <img src="../assets/images/method/1738000654_e2a9395885e052c79a15.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                                                                                <div class="col-6">
+                                                                    <div class="eniv-method" id="method-21" onclick="method('21');">
+                                                                        <div>
+                                                                            <h1>Bank BCA</h1>
+                                                                            <p>Rp 0</p>
+                                                                        </div>
+                                                                        <img src="../assets/images/method/1733108905_1b8aedea2e5e91bdcaa2.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-footer">
+                                                                                                                <img src="../assets/images/method/1738000654_e2a9395885e052c79a15.png" alt="">
+                                                                                                                <img src="../assets/images/method/1733108905_1b8aedea2e5e91bdcaa2.png" alt="">
+                                                                                                            </div>
+                                                </div>
+                                                                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="eniv-card-games">
+                                        <div class="eniv-card-games-left">
+                                            <span>
+                                                <img src="../assets/images/games/section/4.png" alt="">
+                                            </span>
+                                        </div>
+                                        <div class="eniv-card-games-right">
+                                            <h1 class="eniv-card-games-title">Kode Voucher</h1>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text ps-3">
+                                                            <i class="fa fa-tag"></i>
+                                                        </span>
+                                                        <input type="text" class="form-control ps-1" autocomplete="off" placeholder="Kode Voucher (Optional)" name="voucher">
+                                                        <button class="btn btn-primary" type="button" onclick="check_voucher();" id="btn-voucher">Gunakan</button>
+                                                    </div>
+                                                    <small>Kosongkan jika tidak memiliki Kode Voucher</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="eniv-card-games">
+                                        <div class="eniv-card-games-left">
+                                            <span>
+                                                <img src="../assets/images/games/section/5.png" alt="">
+                                            </span>
+                                        </div>
+                                        <div class="eniv-card-games-right">
+                                            <h1 class="eniv-card-games-title">No. Whatsapp</h1>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="mb-3">
+                                                        <div class="input-group">
+                                                            <span class="input-group-text ps-3">
+                                                                <i class="fab fa-whatsapp" style="font-size: 18px;"></i>
+                                                            </span>
+                                                            <input type="text" class="form-control ps-1" autocomplete="off" placeholder="No. Whatsapp" name="wa" inputmode="number">
+                                                        </div>
+                                                    </div>
+                                                    <small>No. Whatsapp yang kamu masukan akan kami hubungi jika terjadi kendala</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="eniv-card-games">
+                                        <div class="eniv-card-games-left"></div>
+                                        <div class="eniv-card-games-right">
+                                            <button class="btn btn-primary w-100" type="button" onclick="confirm();" id="btn-confirm">
+                                                <i class="fa fa-shopping-basket me-2"></i> Konfirmasi Pesanan
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="eniv-games-right">
+                                                                        <div class="eniv-space d-none-mobile">
+                                        <div class="eniv-games-deskripsi-btn" data-bs-toggle="collapse" data-bs-target="#collapseDeskripsi" aria-expanded="true" aria-controls="collapseDeskripsi">
+                                            Deskripsi
+                                            <i class="fa fa-chevron-down"></i>
+                                        </div>
+                                        <div class="collapse show" id="collapseDeskripsi">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    .                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="eniv-space">
+                                        <div class="eniv-review">
+                                            <h1>Penilaian dan Review</h1>
+                                            <div class="eniv-review-rating">
+                                                0                                                <span>/ 5.0</span>
+                                            </div>
+                                            <ul class="eniv-review-star">
+                                                                                                <li>
+                                                    <div class="eniv-review-star-left">
+                                                        1 <i class="fa fa-star"></i>
+                                                    </div>
+                                                    <div class="eniv-review-star-range">
+                                                        <span style="width: 0%;"></span>
+                                                    </div>
+                                                    <div class="eniv-review-star-total">0</div>
+                                                </li>
+                                                                                                <li>
+                                                    <div class="eniv-review-star-left">
+                                                        2 <i class="fa fa-star"></i>
+                                                    </div>
+                                                    <div class="eniv-review-star-range">
+                                                        <span style="width: 0%;"></span>
+                                                    </div>
+                                                    <div class="eniv-review-star-total">0</div>
+                                                </li>
+                                                                                                <li>
+                                                    <div class="eniv-review-star-left">
+                                                        3 <i class="fa fa-star"></i>
+                                                    </div>
+                                                    <div class="eniv-review-star-range">
+                                                        <span style="width: 0%;"></span>
+                                                    </div>
+                                                    <div class="eniv-review-star-total">0</div>
+                                                </li>
+                                                                                                <li>
+                                                    <div class="eniv-review-star-left">
+                                                        4 <i class="fa fa-star"></i>
+                                                    </div>
+                                                    <div class="eniv-review-star-range">
+                                                        <span style="width: 0%;"></span>
+                                                    </div>
+                                                    <div class="eniv-review-star-total">0</div>
+                                                </li>
+                                                                                                <li>
+                                                    <div class="eniv-review-star-left">
+                                                        5 <i class="fa fa-star"></i>
+                                                    </div>
+                                                    <div class="eniv-review-star-range">
+                                                        <span style="width: 0%;"></span>
+                                                    </div>
+                                                    <div class="eniv-review-star-total">0</div>
+                                                </li>
+                                                                                            </ul>
+                                                                                        <a href="../review.html" class="btn btn-primary btn-sm w-100">Lihat selengkapnya</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+        <div class="eniv-footer">
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col-lg-6">
+                        <img src="../assets/images/1738000049_1b486829364bfa9d672a.png" alt="" height="40">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="eniv-footer-method">
+                                                        <img src="../assets/images/method/1732866477_e5f25bbc8ec662b2c2ea.png" alt="">
+                                                        <img src="../assets/images/method/1732866394_5487244033a8de69dcf9.png" alt="">
+                                                        <img src="../assets/images/method/1732866122_2eeb66155a49ffdcc0b1.png" alt="">
+                                                    </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="eniv-footer-description">
+                            Tokoden adalah platform terpercaya untuk top-up berbagai game favorit Anda. Dengan proses cepat, harga bersaing, dan layanan yang mudah digunakan, Tokoden menjadi solusi terbaik untuk kebutuhan top-up Anda.                        </div>
+                        <p class="eniv-footer-copyright">Copyright &copy; 2025 Tokoden - All Right Reserved</p>
+                    </div>
+                    <div class="col-lg-2 col-6">
+                        <div class="eniv-footer-menu">
+                            <b>Menu Cepat</b>
+                            <a href="../index.html">Beranda</a>
+                            <a href="../orders.html">Cek Pesanan</a>
+                            <a href="../price.html">Daftar Harga</a>
+                            <a href="../review.html">Review</a>
+                            <a href="../calculator.html">Kalkulator ML</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-6">
+                        <div class="eniv-footer-menu">
+                            <b>Tentang</b>
+                            <a href="../help.html">Hubungi Kami</a>
+                            <a href="../terms.html">Syarat dan Ketentuan</a>
+                            <a href="../privacy.html">Kebijakan Privasi</a>
+                            <a href="../faq.html">Pertanyaan Umum</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="eniv-footer-menu">
+                            <b>Bantuan</b>
+                                                    </div>
+                    </div>
+                </div>
+                <div class="eniv-footer-copyright-mobile">
+                    Copyright &copy; 2025 Tokoden - All Right Reserved
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+
+        
+        
+        
+        
+                <script>
+
+            var base_url = 'https://tokoden.id';
+
+            function salin(text, message) { 
+                
+                navigator.clipboard.writeText(text); 
+
+                Swal.fire('Berhasil', message, 'success');
+            }
+
+            function filterList(keyword) {
+                
+                keyword = keyword.toLowerCase();
+                
+                $('.eniv-pricelist-games li').each(function() {
+                    
+                    const itemText = $(this).find('span').text().toLowerCase();
+                    
+                    if (itemText.includes(keyword)) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            }
+
+            function menu_user_hide() {
+
+                var div = $(".eniv-navbar-center-menu-mobile");
+                gsap.to(div, { duration: .2, opacity: 0 });
+                setTimeout(function() {
+                    div.css('display', 'none')
+                }, 200);
+            }
+
+            $(".eniv-navbar-start-toggle").on('click', function() {
+
+                                    
+                if ($(".eniv-navbar-center-menu-mobile").css('display') == 'none') {
+                    var div = $(".eniv-navbar-center-menu-mobile").css('display', 'block');
+                    gsap.to(div, { duration: .2, opacity: 1 });
+                } else {
+                    menu_user_hide();
+                }
+            });
+        </script>
+
+                                                                    
+                    <div class="modal fade" id="modalConfirm" tabindex="-1" aria-labelledby="modalConfirmLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="alert alert-warning text-center">Silahkan konfirmasi pesanan</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        const slug = 'hgim';
+                    </script>
+                    <script src="../assets/js/games/app.js"></script>
+
+                    
+                                        <script>
+                        const desktopLimit = { initial: 12, increment: 6 };
+                        const mobileLimit = { initial: 6, increment: 4 };
+                    </script>
+                    <script src="../assets/js/games/limit.js"></script>
+                                        
+    </body>
+</html>
