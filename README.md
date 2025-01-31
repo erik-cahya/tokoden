@@ -1,6 +1,6 @@
 Website TopUp Game Online - Tokoden 
 
-<strong>Progress Page</strong>
+<strong>Progress Stats</strong>
 <hr>
 - ✅  /index → beranda <br>
 - ✅  /orders → cek pesanan <br>
