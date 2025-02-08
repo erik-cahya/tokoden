@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Dashboard - Tokoden</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com/">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+        <link rel="stylesheet" href="./assets/css2">
+        <link rel="shortcut icon" href="../assets/images/1738000059_80ba666e578a141036ef.png" type="image/x-icon">
+        <link rel="stylesheet" href="./assets/all.min.css">
+        <link rel="stylesheet" href="./assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="./assets/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="./assets/style.css">
+        <link rel="stylesheet" href="./assets/enivay.css">
+                <link rel="stylesheet" href="./assets/codemirror.min.css">
+        <link rel="stylesheet" href="./assets/dracula.min.css">
+        <link rel="stylesheet" href="./assets/admin.css">
+        
+        <style>
+            @media (min-width: 1400px) {
+                .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+                    max-width: 1080px;
+                    padding: 0 20px;
+                }
+            }
+            @media (max-width: 991px) {
+                .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+                    padding: 0 14px;
+                }
+                .table-responsive {
+                    overflow-x: auto;
+                }
+                .eniv-variasi-blur {
+                    transform: none;
+                    width: 100%;
+                    max-width: 400px;
+                }
+                .eniv-navbar-top-start {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+                .eniv-banner {
+                    margin-bottom: 20px;
+                }
+                .eniv-games-popular a h1 {
+                    font-size: 14px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    margin-bottom: 4px;
+                }
+                .eniv-games-popular a h2 {
+                    font-size: 14px;
+                    background: var(--primary);
+                    top: 0;
+                    right: 0;
+                    padding: 2px 2px 4px 4px;
+                    border-radius: 0 0 0 12px;
+                }
+                .eniv-games-popular a img {
+                    height: 52px;
+                }
+                .eniv-games-popular {
+                    margin-bottom: 10px;
+                    max-height: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                }
+                .eniv-games-popular a {
+                    gap: 10px;
+                    margin-bottom: 0;
+                    width: calc(50% - 5px);
+                }
+                .eniv-category::-webkit-scrollbar {
+                    width: 0;
+                }
+                .eniv-navbar-end-profile span {
+                    display: none;
+                }
+                .eniv-navbar-center .eniv-navbar-center-brand {
+                    display: grid;
+                }
+                .eniv-navbar-center .eniv-navbar-center-menu {
+                    display: none;
+                }
+                .d-none-mobile {
+                    display: none !important;
+                }
+                .eniv-navbar-start .eniv-navbar-start-brand {
+                    display: none;
+                }
+                .eniv-navbar-start .eniv-navbar-start-toggle {
+                    display: block;
+                }
+                .eniv-games {
+                    gap: 10px;
+                    justify-content: flex-start;
+                }
+                .eniv-games a {
+                    padding: 12px;
+                    width: calc(33% - 6px);
+                }
+                .eniv-games a h1 {
+                    font-size: 13px;
+                    line-height: 18px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+                .eniv-games a span {
+                    font-size: 12px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+                .eniv-page p {
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+                .eniv-flash-sale-head {
+                    gap: 10px;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+                .eniv-content {
+                    padding: 30px 0;
+                }
+                .eniv-footer-method {
+                    display: none;
+                }
+                .eniv-footer-menu {
+                    margin-bottom: 30px;
+                }
+                .eniv-footer-copyright {
+                    display: none;
+                }
+                .eniv-footer-copyright-mobile {
+                    display: block;
+                }
+                .eniv-space .eniv-games-list:last-child {
+                    margin-bottom: 0;
+                }
+                .d-none-pc {
+                    display: block;
+                }
+                .eniv-games-banner-content {
+                    padding: 20px;
+                    align-items: flex-start;
+                }
+                .eniv-games-banner-content h1 {
+                    font-size: 16px;
+                }
+                .eniv-games-logo {
+                    height: 84px;
+                }
+                .eniv-games-banner-content ul li {
+                    white-space: nowrap;
+                }
+                .eniv-games-banner-content ul {
+                    gap: 14px;
+                    flex-wrap: wrap;
+                }
+                .eniv-games-banner-content span {
+                    margin-bottom: 16px;
+                }
+                .eniv-card-games {
+                    gap: 12px;
+                }
+                .eniv-card-games-left {
+                    width: 46px;
+                }
+                .eniv-card-games-left span {
+                    height: 46px;
+                    position: relative;
+                    margin-top: -20px;
+                }
+                .eniv-card-games-title {
+                    font-size: 16px;
+                    height: 46px;
+                }
+                .eniv-card-games-right {
+                    width: calc(100% - 58px);
+                }
+                .eniv-card-games-right .card {
+                    margin-left: -58px;
+                    width: calc(100% + 58px);
+                }
+                .eniv-card-games-right .eniv-category,
+                .eniv-card-games-right .eniv-product-list  {
+                    margin-left: -58px;
+                    width: calc(100% + 58px);
+                }
+                .eniv-card-games-right .eniv-method-main {
+                    margin-left: -58px;
+                    width: calc(100% + 58px);
+                }
+                .eniv-card-games-right .eniv-card-games-title {
+                    margin-bottom: 22px;
+                }
+                .eniv-card-games-right .accordion {
+                    margin-left: -58px;
+                    width: calc(100% + 58px);
+                }
+                .eniv-card-games-right .btn#btn-confirm {
+                    margin-left: -58px;
+                    width: calc(100% + 58px) !important;
+                }
+                .eniv-product-list {
+                    gap: 12px;
+                }
+                .eniv-product {
+                    padding: 8px;
+                    width: calc(50% - 6px);
+                }
+                .eniv-product p {
+                    line-height: 20px;
+                }
+                .eniv-product img {
+                    height: 40px;
+                }
+                .accordion-body .eniv-method {
+                    padding: 12px 14px;
+                    flex-direction: column-reverse;
+                    gap: 16px;
+                    align-items: flex-start;
+                }
+                #accordionMethod .accordion-body .row .col-6:nth-child(odd) {
+                    padding-right: 7px;
+                }
+                #accordionMethod .accordion-body .row .col-6:nth-child(even) {
+                    padding-left: 7px;
+                }
+                .eniv-auth {
+                    padding: 20px 0;
+                    flex-direction: column;
+                }
+                .eniv-auth-end {
+                    width: 100%;
+                }
+                .eniv-auth-start {
+                    width: 100%;
+                }
+                .eniv-auth-end, .eniv-banner-auth .item {
+                    height: 468px;
+                }
+                .eniv-faq-body {
+                    margin-bottom: 60px;
+                }
+                .eniv-faq-item-header {
+                    padding: 16px 0;
+                }
+                .eniv-card-users {
+                    margin-bottom: 40px;
+                }
+                .eniv-admin-menu {
+                    display: none;
+                    opacity: 0;
+                    flex-direction: column;
+                    gap: 12px;
+                    position: absolute;
+                    top: 21px;
+                    z-index: 10000;
+                    left: 0;
+                    right: 0;
+                }
+                .eniv-navbar-admin-toggle {
+                    display: block;
+                }
+                div.eniv-admin-item:hover ul {
+                    padding-top: 6px;
+                    width: calc(100% - 50px);
+                }
+                .eniv-games-target-right {
+                    position: absolute;
+                    top: -70px;
+                    right: 0;
+                }
+                .eniv-navbar-center-menu-mobile {
+                    
+                }
+            }
+            @media (max-width: 767px) {
+                .eniv-orders-games {
+                    flex-direction: column;
+                    gap: 20px;
+                }
+                .eniv-orders-games-card {
+                    width: 100%;
+                }
+            }
+        </style>
+
+        <link rel="stylesheet" href="./assets/morris.css"> 
+
+    <body>
+        <div class="eniv-screenoff"></div>
+        <div class="eniv-variasi-blur"></div>
+        <div class="eniv-navbar-top">
+            <div class="container">
+                <div class="eniv-navbar-top-content">
+                    <div class="eniv-navbar-top-start"></div>
+                    <div class="eniv-navbar-top-end"></div>
+                </div>
+            </div>
+        </div>
+        <div class="eniv-navbar">
+            <div class="container">
+                <div class="eniv-navbar-content">
+                    <div class="eniv-navbar-start">
+                        <a href="../index.html" class="eniv-navbar-start-brand">
+                            <img src="./assets/1738000049_1b486829364bfa9d672a.png" alt="">
+                        </a>
+                        <div class="eniv-navbar-start-toggle">
+                            <img src="./assets/menu.svg" alt="">
+                        </div>
+                        <div class="eniv-navbar-admin-toggle">
+                            <img src="./assets/menu-admin.png" alt="">
+                        </div>
+                    </div>
+                    <div class="eniv-navbar-center">
+                        <div class="eniv-navbar-center-brand">
+                            <a href="../index.html">
+                                <img src="./assets/1738000049_1b486829364bfa9d672a.png" alt="">
+                            </a>
+                        </div>
+                        <div class="eniv-navbar-center-menu">
+                            <a href="../index.html" class="">Beranda</a>
+                            <a href="../orders.html" class="">Cek Pesanan</a>
+                            <a href="../price.html" class="">Daftar Harga</a>
+                        </div>
+                    </div>
+                    <div class="eniv-navbar-end">
+                        <a href="./admin.html" class="eniv-navbar-end-btn py-2 px-3 bg-primary me-3 d-none-mobile"><i class="fa fa-cog m-0"></i></a>
+                        <a href="./users.html" class="eniv-navbar-end-profile">
+                            <span>Akun Saya</span>
+                            <img src="./assets/1738004619_b0319761872079498123.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="eniv-navbar-center-menu-mobile">
+                    <a href="../index.html" class="">
+                        <img src="./assets/home.png" alt="">
+                        Beranda
+                    </a>
+                    <a href="../orders.html" class="">
+                        <img src="./assets/orders.png" alt="">
+                        Cek Pesanan
+                    </a>
+                    <a href="../price.html" class="">
+                        <img src="./assets/price.png" alt="">
+                        Daftar Harga
+                    </a>
+                    <a href="../review.html" class="">
+                        <img src="./assets/review.png" alt="">
+                        Review
+                    </a>
+                    <a href="../calculator.html" class="">
+                        <img src="./assets/calculator.png" alt="">
+                        Kalkulator ML
+                    </a>
+                    <a href="../help.html" class="">
+                        <img src="./assets/help.png" alt="">
+                        Hubungi Kami
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="eniv-body">
+            <div class="container">
+                <div class="eniv-content">
+                    <div class="eniv-admin">
+                        <div class="eniv-admin-menu">
+                            <a href="./admin.html" class="eniv-admin-item"><span><i class="fa fa-home"></i></span></a>
+                            <a href="./admin/config.html" class="eniv-admin-item"><span>Konfigurasi</span></a>
+                            <div class="eniv-admin-item">
+                                <span>Akun</span>
+                                <ul>
+                                    <li><a href="./admin/users" class="">Kelola Akun</a></li>
+                                    <li><a href="./admin/level" class="">Kelola Level</a></li>
+                                    <li><a href="./admin/balance" class="">Riwayat Saldo</a></li>
+                                </ul>
+                            </div>
+                            <div class="eniv-admin-item">
+                                <span>Pembelian</span>
+                                <ul>
+                                    <li><a href="./admin/orders/data" class="">Data Pembelian</a></li>
+                                    <li><a href="./admin/orders/grid" class="">Grid Pembelian</a></li>
+                                    <li><a href="./admin/orders/review" class="">Review Pembelian</a></li>
+                                    <li><a href="./admin/orders/report" class="">Laporan Pembelian</a></li>
+                                </ul>
+                            </div>
+                            <a href="./admin/topup" class="eniv-admin-item"><span>Isi Saldo</span></a>
+                            <div class="eniv-admin-item">
+                                <span>Games</span>
+                                <ul>
+                                    <li><a href="./admin/games/data" class="">Kelola Games</a></li>
+                                    <li><a href="./admin/games/category" class="">Kelola Kategori</a></li>
+                                    <li><a href="./admin/games/tag" class="">Kelola Tag</a></li>
+                                    <li><a href="./admin/games/target" class="">Sistem Target</a></li>
+                                </ul>
+                            </div>
+                            <div class="eniv-admin-item">
+                                <span>Produk</span>
+                                <ul>
+                                    <li><a href="./admin/product/data" class="">Kelola Produk</a></li>
+                                    <li><a href="./admin/product/flash" class="">Flash Sale</a></li>
+                                    <li><a href="./admin/product/category" class="">Kelola Kategori</a></li>
+                                    <li><a href="./admin/product/icon" class="">Kelola Icon</a></li>
+                                    <li><a href="./admin/product/markup" class="">Markup Harga</a></li>
+                                    <li><a href="./admin/product/get" class="">Get Produk</a></li>
+                                    <li><a href="./admin/product/config" class="">Konfigurasi</a></li>
+                                </ul>
+                            </div>
+                            <div class="eniv-admin-item">
+                                <span>Metode</span>
+                                <ul>
+                                    <li><a href="./admin/method/data" class="">Kelola Metode</a></li>
+                                    <li><a href="./admin/method/category" class="">Kelola Kategori</a></li>
+                                </ul>
+                            </div>
+                            <a href="./admin/voucher" class="eniv-admin-item"><span>Voucher</span></a>
+                            <a href="./admin/banner" class="eniv-admin-item"><span>Banner</span></a>
+                            <a href="./admin/news" class="eniv-admin-item"><span>Berita</span></a>
+                            <div class="eniv-admin-item">
+                                <span>Notifikasi</span>
+                                <ul>
+                                    <li><a href="./admin/notif/whatsapp" class="">Notif Whatsapp</a></li>
+                                    <li><a href="./admin/notif/email" class="">Notif Email</a></li>
+                                    <li><a href="./admin/notif/whatsapp/response" class="">Response Whatsapp</a></li>
+                                    <li><a href="./admin/notif/email/response" class="">Response Email</a></li>
+                                </ul>
+                            </div>
+                            <div class="eniv-admin-item">
+                                <span>Lainnya</span>
+                                <ul>
+                                    <li><a href="./admin/popup" class="">Kelola Popup</a></li>
+                                    <li><a href="./admin/otp" class="">Kelola OTP</a></li>
+                                    <li><a href="./admin/sosmed" class="">Kelola Sosmed</a></li>
+                                    <li><a href="./admin/preference" class="">Kelola Tampilan</a></li>
+                                    <li>
+                                        <a href="./admin/pages/help" class="">
+                                            Hubungi Kami 
+                                                                                    </a>
+                                    </li>
+                                    <li><a href="./admin/faq/data" class="">Pertanyaan Umum</a></li>
+                                    <li><a href="./admin/pages/terms" class="">Syarat dan Ketentuan</a></li>
+                                    <li><a href="./admin/pages/privacy" class="">Kebijakan Privasi</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="eniv-admin-content">                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="card mb-4">
+                                        <div class="card-body">
+                                            <div class="eniv-statistic">
+                                                <div>
+                                                    <p>Total Transaksi Hari Ini</p>
+                                                    <h1>Rp 210.616 - ( 7 )</h1>
+                                                </div>
+                                                <div class="eniv-statistic-icon">
+                                                    <i class="fa fa-shopping-cart"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="card mb-4">
+                                        <div class="card-body">
+                                            <div class="eniv-statistic">
+                                                <div>
+                                                    <p>Total Isi Saldo Hari Ini</p>
+                                                    <h1>Rp 210.616 - ( 7 )</h1>
+                                                </div>
+                                                <div class="eniv-statistic-icon">Rp</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="eniv-page eniv-page-tools">
+                                <h1>Grafik pembelian 30 hari terakhir</h1>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div id="orders" style="height: 280px; position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg height="280" version="1.1" width="1000" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.5px; top: -0.390625px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="36.181640625" y="241" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><path fill="none" stroke="#aaaaaa" d="M48.681640625,241H975" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="36.181640625" y="187" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">17.5</tspan></text><path fill="none" stroke="#aaaaaa" d="M48.681640625,187H975" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="36.181640625" y="133" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">35</tspan></text><path fill="none" stroke="#aaaaaa" d="M48.681640625,133H975" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="36.181640625" y="79" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">52.5</tspan></text><path fill="none" stroke="#aaaaaa" d="M48.681640625,79H975" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="36.181640625" y="25" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">70</tspan></text><path fill="none" stroke="#aaaaaa" d="M48.681640625,25H975" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="928.68408203125" y="253.5" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">11 Januari 2025</tspan></text><text x="774.2976888020834" y="253.5" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">16 Januari 2025</tspan></text><text x="619.9112955729166" y="253.5" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">21 Januari 2025</tspan></text><text x="465.52490234375" y="253.5" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">26 Januari 2025</tspan></text><text x="311.1385091145833" y="253.5" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">31 Januari 2025</tspan></text><text x="156.75211588541669" y="253.5" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">05 Februari 2025</tspan></text><rect x="52.541300455729164" y="219.4" width="23.157958984375" height="21.599999999999994" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="83.4185791015625" y="210.14285714285714" width="23.157958984375" height="30.85714285714286" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="114.29585774739583" y="210.14285714285714" width="23.157958984375" height="30.85714285714286" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="145.17313639322916" y="197.8" width="23.157958984375" height="43.19999999999999" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="176.05041503906247" y="151.5142857142857" width="23.157958984375" height="89.4857142857143" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="206.92769368489581" y="200.8857142857143" width="23.157958984375" height="40.1142857142857" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="237.80497233072916" y="40.428571428571416" width="23.157958984375" height="200.57142857142858" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="268.6822509765625" y="102.14285714285714" width="23.157958984375" height="138.85714285714286" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="299.5595296223958" y="83.62857142857143" width="23.157958984375" height="157.37142857142857" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="330.4368082682292" y="225.57142857142858" width="23.157958984375" height="15.428571428571416" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="361.3140869140625" y="210.14285714285714" width="23.157958984375" height="30.85714285714286" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="392.1913655598958" y="194.71428571428572" width="23.157958984375" height="46.28571428571428" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="423.0686442057292" y="241" width="23.157958984375" height="0" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="453.9459228515625" y="241" width="23.157958984375" height="0" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="484.8232014973958" y="241" width="23.157958984375" height="0" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="515.7004801432291" y="241" width="23.157958984375" height="0" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="546.5777587890624" y="241" width="23.157958984375" height="0" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="577.4550374348958" y="241" width="23.157958984375" height="0" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="608.3323160807291" y="241" width="23.157958984375" height="0" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="639.2095947265624" y="241" width="23.157958984375" height="0" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="670.0868733723958" y="241" width="23.157958984375" height="0" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="700.9641520182291" y="241" width="23.157958984375" height="0" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="731.8414306640624" y="241" width="23.157958984375" height="0" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="762.7187093098958" y="241" width="23.157958984375" height="0" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="793.5959879557291" y="241" width="23.157958984375" height="0" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="824.4732666015624" y="241" width="23.157958984375" height="0" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="855.3505452473958" y="241" width="23.157958984375" height="0" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="886.2278238932291" y="241" width="23.157958984375" height="0" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="917.1051025390624" y="241" width="23.157958984375" height="0" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="947.9823811848958" y="241" width="23.157958984375" height="0" r="0" rx="0" ry="0" fill="#0084ff" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect></svg><div class="morris-hover morris-default-style" style="left: 165.14px; top: 112px;"><div class="morris-hover-row-label">03 Februari 2025</div><div class="morris-hover-point" style="color: #0084ff">
+  Total :
+  13
+</div></div></div>
+                                </div>
+                            </div>
+                                            </div>
+                    </div>                                    </div>
+            </div>
+        </div>
+        <div class="eniv-footer">
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col-lg-6">
+                        <img src="./assets/1738000049_1b486829364bfa9d672a.png" alt="" height="40">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="eniv-footer-method">
+                                                        <img src="./assets/1738000654_e2a9395885e052c79a15.png" alt="">
+                                                        <img src="./assets/1732866477_e5f25bbc8ec662b2c2ea.png" alt="">
+                                                        <img src="./assets/1732866394_5487244033a8de69dcf9.png" alt="">
+                                                        <img src="./assets/1732866122_2eeb66155a49ffdcc0b1.png" alt="">
+                                                    </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="eniv-footer-description">
+                            Tokoden adalah platform terpercaya untuk top-up berbagai game favorit Anda. Dengan proses cepat, harga bersaing, dan layanan yang mudah digunakan, Tokoden menjadi solusi terbaik untuk kebutuhan top-up Anda.                        </div>
+                        <p class="eniv-footer-copyright">Copyright © 2025 Tokoden - All Right Reserved</p>
+                    </div>
+                    <div class="col-lg-2 col-6">
+                        <div class="eniv-footer-menu">
+                            <b>Menu Cepat</b>
+                            <a href="https://tokoden.id/">Beranda</a>
+                            <a href="https://tokoden.id/orders">Cek Pesanan</a>
+                            <a href="https://tokoden.id/price">Daftar Harga</a>
+                            <a href="https://tokoden.id/review">Review</a>
+                            <a href="https://tokoden.id/calculator">Kalkulator ML</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-6">
+                        <div class="eniv-footer-menu">
+                            <b>Tentang</b>
+                            <a href="https://tokoden.id/help">Hubungi Kami</a>
+                            <a href="https://tokoden.id/terms">Syarat dan Ketentuan</a>
+                            <a href="https://tokoden.id/privacy">Kebijakan Privasi</a>
+                            <a href="https://tokoden.id/faq">Pertanyaan Umum</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="eniv-footer-menu">
+                            <b>Bantuan</b>
+                                                    </div>
+                    </div>
+                </div>
+                <div class="eniv-footer-copyright-mobile">
+                    Copyright © 2025 Tokoden - All Right Reserved
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" async="" charset="utf-8" src="./assets/recaptcha__en.js.download" crossorigin="anonymous" integrity="sha384-P3vOnwOQjXmCJwx1vTvZAroj9OVXiVWsH201GY3AuWFi+LVyRVQwt0M/4hdSxMBf"></script><script src="./assets/jquery-3.6.0.min.js.download"></script>
+        <script src="./assets/jquery-ui.js.download"></script>
+        <script src="./assets/bootstrap.bundle.min.js.download"></script>
+        <script src="./assets/owl.carousel.min.js.download"></script>
+        <script src="./assets/gsap.min.js.download"></script>
+        <script src="./assets/sweetalert2@11"></script>
+        <script src="./assets/jquery.dataTables.min.js.download"></script>
+        <script src="./assets/ckeditor.js.download"></script>
+        <script src="./assets/api.js.download"></script>
+
+        
+                <script>
+            function logout() {
+                Swal.fire({
+                    title: "Anda yakin?",
+                    text: "Anda akan logout dari akun",
+                    icon: "info",
+                    showCancelButton: true,
+                    confirmButtonText: "Tetap Logout",
+                    cancelButtonText: "Batal"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = 'https://tokoden.id/logout'
+                    }
+                });
+            }
+        </script>
+                <script src="./assets/codemirror.min.js.download"></script>
+        <script src="./assets/htmlmixed.min.js.download"></script>
+        <script>
+            function random_string(length) {
+                const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                let result = '';
+                for (let i = 0; i < length; i++) {
+                    result += characters.charAt(Math.floor(Math.random() * characters.length));
+                }
+                return result;
+            }
+            function hapus(link) {
+
+                Swal.fire({
+                    title: "Anda yakin?",
+                    text: "Data akan dihapus secara permanen",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonText: "Tetap Hapus",
+                    cancelButtonText: "Batal",
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = link;
+                    }
+                });
+            }
+
+            function menu_admin_hide() {
+
+                var div = $(".eniv-admin-menu");
+                gsap.to(div, { duration: .2, opacity: 0 });
+                setTimeout(function() {
+                    div.css('display', 'none')
+                }, 200);
+            }
+
+            $(".eniv-navbar-admin-toggle").on('click', function() {
+
+                const currentPath = window.location.pathname;
+                
+                if (!currentPath.includes('/admin')) {
+                    window.location.href = '/admin';
+                } else {
+
+                    menu_user_hide();
+                    
+                    if ($(".eniv-admin-menu").css('display') == 'none') {
+                        var div = $(".eniv-admin-menu").css('display', 'flex');
+                        gsap.to(div, { duration: .2, opacity: 1 });
+                    } else {
+                        menu_admin_hide();
+                    }
+                }
+            });
+        </script>
+                
+        
+        
+                <script>
+
+            var base_url = 'https://tokoden.id';
+
+            function salin(text, message) { 
+                
+                navigator.clipboard.writeText(text); 
+
+                Swal.fire('Berhasil', message, 'success');
+            }
+
+            function filterList(keyword) {
+                
+                keyword = keyword.toLowerCase();
+                
+                $('.eniv-pricelist-games li').each(function() {
+                    
+                    const itemText = $(this).find('span').text().toLowerCase();
+                    
+                    if (itemText.includes(keyword)) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            }
+
+            function menu_user_hide() {
+
+                var div = $(".eniv-navbar-center-menu-mobile");
+                gsap.to(div, { duration: .2, opacity: 0 });
+                setTimeout(function() {
+                    div.css('display', 'none')
+                }, 200);
+            }
+
+            $(".eniv-navbar-start-toggle").on('click', function() {
+
+                                                menu_admin_hide();
+                                                    
+                if ($(".eniv-navbar-center-menu-mobile").css('display') == 'none') {
+                    var div = $(".eniv-navbar-center-menu-mobile").css('display', 'block');
+                    gsap.to(div, { duration: .2, opacity: 1 });
+                } else {
+                    menu_user_hide();
+                }
+            });
+        </script>
+
+                            <script src="./assets/raphael-min.js.download"></script>
+                    <script src="./assets/morris.min.js.download"></script>
+                    <script>
+                        new Morris.Bar({
+                            element: 'orders',
+                            data: [
+                                                                { label: '08 Februari 2025', total: 7 },
+                                                                { label: '07 Februari 2025', total: 10 },
+                                                                { label: '06 Februari 2025', total: 10 },
+                                                                { label: '05 Februari 2025', total: 14 },
+                                                                { label: '04 Februari 2025', total: 29 },
+                                                                { label: '03 Februari 2025', total: 13 },
+                                                                { label: '02 Februari 2025', total: 65 },
+                                                                { label: '01 Februari 2025', total: 45 },
+                                                                { label: '31 Januari 2025', total: 51 },
+                                                                { label: '30 Januari 2025', total: 5 },
+                                                                { label: '29 Januari 2025', total: 10 },
+                                                                { label: '28 Januari 2025', total: 15 },
+                                                                { label: '27 Januari 2025', total: 0 },
+                                                                { label: '26 Januari 2025', total: 0 },
+                                                                { label: '25 Januari 2025', total: 0 },
+                                                                { label: '24 Januari 2025', total: 0 },
+                                                                { label: '23 Januari 2025', total: 0 },
+                                                                { label: '22 Januari 2025', total: 0 },
+                                                                { label: '21 Januari 2025', total: 0 },
+                                                                { label: '20 Januari 2025', total: 0 },
+                                                                { label: '19 Januari 2025', total: 0 },
+                                                                { label: '18 Januari 2025', total: 0 },
+                                                                { label: '17 Januari 2025', total: 0 },
+                                                                { label: '16 Januari 2025', total: 0 },
+                                                                { label: '15 Januari 2025', total: 0 },
+                                                                { label: '14 Januari 2025', total: 0 },
+                                                                { label: '13 Januari 2025', total: 0 },
+                                                                { label: '12 Januari 2025', total: 0 },
+                                                                { label: '11 Januari 2025', total: 0 },
+                                                                { label: '10 Januari 2025', total: 0 },
+                                                            ],
+                            xkey: 'label',
+                            ykeys: ['total'],
+                            labels: ['Total '],
+                            barColors: ['#0084ff'],
+                            resize: true,
+                            parseTime: false
+                        });
+                    </script>
+                    
+    
+</body></html>

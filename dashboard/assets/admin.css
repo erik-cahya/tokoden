@@ -1,0 +1,61 @@
+.eniv-admin {
+    display: flex;
+    gap: 30px;
+    align-items: start;
+    flex-direction: column;
+}
+.eniv-admin-menu {
+    display: flex;
+    background-color: var(--warna_4);
+    padding: 20px 16px;
+    border-radius: 8px;
+    width: 100%;
+    gap: 2px;
+}
+.eniv-admin-item {
+    padding: 0 10px;
+    color: var(--text);
+}
+a.eniv-admin-item:hover span {
+    color: #fff;
+}
+div.eniv-admin-item:hover span {
+    color: #fff;
+}
+div.eniv-admin-item span {
+    cursor: pointer;
+}
+div.eniv-admin-item ul {
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    z-index: 10;
+}
+div.eniv-admin-item ul li a {
+    background-color: #262731;
+    color: var(--text);
+    display: block;
+    padding: 8px 16px;
+    min-width: 180px;
+}
+div.eniv-admin-item ul li a:hover {
+    color: #fff;
+}
+div.eniv-admin-item ul li:first-child a {
+    border-radius: 8px 8px 0 0;
+    padding-top: 18px;
+}
+div.eniv-admin-item ul li:last-child a {
+    border-radius: 0 0 8px 8px;
+    padding-bottom: 18px;
+}
+div.eniv-admin-item:hover ul {
+    height: auto;
+    overflow: auto;
+    padding-top: 34px;
+}
+.eniv-admin-content {
+    width: 100%;
+}
