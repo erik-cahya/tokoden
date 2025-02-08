@@ -991,11 +991,11 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="eniv-footer-method">
-                                                        <img src="../assets/1738000654_e2a9395885e052c79a15.png" alt="">
-                                                        <img src="../assets/1732866477_e5f25bbc8ec662b2c2ea.png" alt="">
-                                                        <img src="../assets/1732866394_5487244033a8de69dcf9.png" alt="">
-                                                        <img src="../assets/1732866122_2eeb66155a49ffdcc0b1.png" alt="">
-                                                    </div>
+                            <img src="../assets/1738000654_e2a9395885e052c79a15.png" alt="">
+                            <img src="../assets/1732866477_e5f25bbc8ec662b2c2ea.png" alt="">
+                            <img src="../assets/1732866394_5487244033a8de69dcf9.png" alt="">
+                            <img src="../assets/1732866122_2eeb66155a49ffdcc0b1.png" alt="">
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -1007,26 +1007,26 @@
                     <div class="col-lg-2 col-6">
                         <div class="eniv-footer-menu">
                             <b>Menu Cepat</b>
-                            <a href="./">Beranda</a>
-                            <a href="./orders">Cek Pesanan</a>
-                            <a href="./price">Daftar Harga</a>
-                            <a href="./review">Review</a>
-                            <a href="./calculator">Kalkulator ML</a>
+                            <a href="../../index.html">Beranda</a>
+                            <a href="../../orders.html">Cek Pesanan</a>
+                            <a href="../../price.html">Daftar Harga</a>
+                            <a href="../../review.html">Review</a>
+                            <a href="../../calculator.html">Kalkulator ML</a>
                         </div>
                     </div>
                     <div class="col-lg-2 col-6">
                         <div class="eniv-footer-menu">
                             <b>Tentang</b>
-                            <a href="./help">Hubungi Kami</a>
-                            <a href="./terms">Syarat dan Ketentuan</a>
-                            <a href="./privacy">Kebijakan Privasi</a>
-                            <a href="./faq">Pertanyaan Umum</a>
+                            <a href="../../help.html">Hubungi Kami</a>
+                            <a href="../../terms.html">Syarat dan Ketentuan</a>
+                            <a href="../../privacy.html">Kebijakan Privasi</a>
+                            <a href="../../faq.html">Pertanyaan Umum</a>
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="eniv-footer-menu">
                             <b>Bantuan</b>
-                                                    </div>
+                        </div>
                     </div>
                 </div>
                 <div class="eniv-footer-copyright-mobile">
@@ -1046,7 +1046,7 @@
         <script src="../assets/api.js.download"></script>
 
         
-                <script>
+        <script>
             function logout() {
                 Swal.fire({
                     title: "Anda yakin?",
@@ -1117,28 +1117,17 @@
                 }
             });
         </script>
-                
-        
-        
-                <script>
-
+        <script>
             var base_url = '.';
-
-            function salin(text, message) { 
-                
+            function salin(text, message) {                 
                 navigator.clipboard.writeText(text); 
-
                 Swal.fire('Berhasil', message, 'success');
             }
 
-            function filterList(keyword) {
-                
-                keyword = keyword.toLowerCase();
-                
-                $('.eniv-pricelist-games li').each(function() {
-                    
-                    const itemText = $(this).find('span').text().toLowerCase();
-                    
+            function filterList(keyword) {                
+                keyword = keyword.toLowerCase();                
+                $('.eniv-pricelist-games li').each(function() {                    
+                    const itemText = $(this).find('span').text().toLowerCase();                    
                     if (itemText.includes(keyword)) {
                         $(this).show();
                     } else {
@@ -1148,7 +1137,6 @@
             }
 
             function menu_user_hide() {
-
                 var div = $(".eniv-navbar-center-menu-mobile");
                 gsap.to(div, { duration: .2, opacity: 0 });
                 setTimeout(function() {
@@ -1157,9 +1145,7 @@
             }
 
             $(".eniv-navbar-start-toggle").on('click', function() {
-
-                                                menu_admin_hide();
-                                                    
+                menu_admin_hide();
                 if ($(".eniv-navbar-center-menu-mobile").css('display') == 'none') {
                     var div = $(".eniv-navbar-center-menu-mobile").css('display', 'block');
                     gsap.to(div, { duration: .2, opacity: 1 });

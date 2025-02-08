@@ -1,466 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Kelola Akun - Tokoden</title>    
-            <link rel="preconnect" href="https://fonts.googleapis.com/">
-            <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-        <link rel="stylesheet" href="../assets/css2">
-
-        <link rel="shortcut icon" href="../../assets/images/1738000059_80ba666e578a141036ef.png" type="image/x-icon">
-
-        <link rel="stylesheet" href="../assets/all.min.css">
-        <link rel="stylesheet" href="../assets/owl.carousel.min.css">
-        <link rel="stylesheet" href="../assets/bootstrap.min.css">
-        <link rel="stylesheet" href="../assets/jquery.dataTables.min.css">
-        <link rel="stylesheet" href="../assets/style.css">
-        <link rel="stylesheet" href="../assets/enivay.css">
-        <link rel="stylesheet" href="../assets/codemirror.min.css">
-        <link rel="stylesheet" href="../assets/dracula.min.css">
-        <link rel="stylesheet" href="../assets/admin.css">
-        
-        <style>
-            @media (min-width: 1400px) {
-                .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-                    max-width: 1080px;
-                    padding: 0 20px;
-                }
-            }
-            @media (max-width: 991px) {
-                .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-                    padding: 0 14px;
-                }
-                .table-responsive {
-                    overflow-x: auto;
-                }
-                .eniv-variasi-blur {
-                    transform: none;
-                    width: 100%;
-                    max-width: 400px;
-                }
-                .eniv-navbar-top-start {
-                    display: -webkit-box;
-                    -webkit-line-clamp: 1;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                }
-                .eniv-banner {
-                    margin-bottom: 20px;
-                }
-                .eniv-games-popular a h1 {
-                    font-size: 14px;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 1;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                    margin-bottom: 4px;
-                }
-                .eniv-games-popular a h2 {
-                    font-size: 14px;
-                    background: var(--primary);
-                    top: 0;
-                    right: 0;
-                    padding: 2px 2px 4px 4px;
-                    border-radius: 0 0 0 12px;
-                }
-                .eniv-games-popular a img {
-                    height: 52px;
-                }
-                .eniv-games-popular {
-                    margin-bottom: 10px;
-                    max-height: none;
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 10px;
-                }
-                .eniv-games-popular a {
-                    gap: 10px;
-                    margin-bottom: 0;
-                    width: calc(50% - 5px);
-                }
-                .eniv-category::-webkit-scrollbar {
-                    width: 0;
-                }
-                .eniv-navbar-end-profile span {
-                    display: none;
-                }
-                .eniv-navbar-center .eniv-navbar-center-brand {
-                    display: grid;
-                }
-                .eniv-navbar-center .eniv-navbar-center-menu {
-                    display: none;
-                }
-                .d-none-mobile {
-                    display: none !important;
-                }
-                .eniv-navbar-start .eniv-navbar-start-brand {
-                    display: none;
-                }
-                .eniv-navbar-start .eniv-navbar-start-toggle {
-                    display: block;
-                }
-                .eniv-games {
-                    gap: 10px;
-                    justify-content: flex-start;
-                }
-                .eniv-games a {
-                    padding: 12px;
-                    width: calc(33% - 6px);
-                }
-                .eniv-games a h1 {
-                    font-size: 13px;
-                    line-height: 18px;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 2;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                }
-                .eniv-games a span {
-                    font-size: 12px;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 1;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                }
-                .eniv-page p {
-                    font-size: 14px;
-                    line-height: 24px;
-                }
-                .eniv-flash-sale-head {
-                    gap: 10px;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: flex-start;
-                }
-                .eniv-content {
-                    padding: 30px 0;
-                }
-                .eniv-footer-method {
-                    display: none;
-                }
-                .eniv-footer-menu {
-                    margin-bottom: 30px;
-                }
-                .eniv-footer-copyright {
-                    display: none;
-                }
-                .eniv-footer-copyright-mobile {
-                    display: block;
-                }
-                .eniv-space .eniv-games-list:last-child {
-                    margin-bottom: 0;
-                }
-                .d-none-pc {
-                    display: block;
-                }
-                .eniv-games-banner-content {
-                    padding: 20px;
-                    align-items: flex-start;
-                }
-                .eniv-games-banner-content h1 {
-                    font-size: 16px;
-                }
-                .eniv-games-logo {
-                    height: 84px;
-                }
-                .eniv-games-banner-content ul li {
-                    white-space: nowrap;
-                }
-                .eniv-games-banner-content ul {
-                    gap: 14px;
-                    flex-wrap: wrap;
-                }
-                .eniv-games-banner-content span {
-                    margin-bottom: 16px;
-                }
-                .eniv-card-games {
-                    gap: 12px;
-                }
-                .eniv-card-games-left {
-                    width: 46px;
-                }
-                .eniv-card-games-left span {
-                    height: 46px;
-                    position: relative;
-                    margin-top: -20px;
-                }
-                .eniv-card-games-title {
-                    font-size: 16px;
-                    height: 46px;
-                }
-                .eniv-card-games-right {
-                    width: calc(100% - 58px);
-                }
-                .eniv-card-games-right .card {
-                    margin-left: -58px;
-                    width: calc(100% + 58px);
-                }
-                .eniv-card-games-right .eniv-category,
-                .eniv-card-games-right .eniv-product-list  {
-                    margin-left: -58px;
-                    width: calc(100% + 58px);
-                }
-                .eniv-card-games-right .eniv-method-main {
-                    margin-left: -58px;
-                    width: calc(100% + 58px);
-                }
-                .eniv-card-games-right .eniv-card-games-title {
-                    margin-bottom: 22px;
-                }
-                .eniv-card-games-right .accordion {
-                    margin-left: -58px;
-                    width: calc(100% + 58px);
-                }
-                .eniv-card-games-right .btn#btn-confirm {
-                    margin-left: -58px;
-                    width: calc(100% + 58px) !important;
-                }
-                .eniv-product-list {
-                    gap: 12px;
-                }
-                .eniv-product {
-                    padding: 8px;
-                    width: calc(50% - 6px);
-                }
-                .eniv-product p {
-                    line-height: 20px;
-                }
-                .eniv-product img {
-                    height: 40px;
-                }
-                .accordion-body .eniv-method {
-                    padding: 12px 14px;
-                    flex-direction: column-reverse;
-                    gap: 16px;
-                    align-items: flex-start;
-                }
-                #accordionMethod .accordion-body .row .col-6:nth-child(odd) {
-                    padding-right: 7px;
-                }
-                #accordionMethod .accordion-body .row .col-6:nth-child(even) {
-                    padding-left: 7px;
-                }
-                .eniv-auth {
-                    padding: 20px 0;
-                    flex-direction: column;
-                }
-                .eniv-auth-end {
-                    width: 100%;
-                }
-                .eniv-auth-start {
-                    width: 100%;
-                }
-                .eniv-auth-end, .eniv-banner-auth .item {
-                    height: 468px;
-                }
-                .eniv-faq-body {
-                    margin-bottom: 60px;
-                }
-                .eniv-faq-item-header {
-                    padding: 16px 0;
-                }
-                .eniv-card-users {
-                    margin-bottom: 40px;
-                }
-                .eniv-admin-menu {
-                    display: none;
-                    opacity: 0;
-                    flex-direction: column;
-                    gap: 12px;
-                    position: absolute;
-                    top: 21px;
-                    z-index: 10000;
-                    left: 0;
-                    right: 0;
-                }
-                .eniv-navbar-admin-toggle {
-                    display: block;
-                }
-                div.eniv-admin-item:hover ul {
-                    padding-top: 6px;
-                    width: calc(100% - 50px);
-                }
-                .eniv-games-target-right {
-                    position: absolute;
-                    top: -70px;
-                    right: 0;
-                }
-                .eniv-navbar-center-menu-mobile {
-                    
-                }
-            }
-            @media (max-width: 767px) {
-                .eniv-orders-games {
-                    flex-direction: column;
-                    gap: 20px;
-                }
-                .eniv-orders-games-card {
-                    width: 100%;
-                }
-            }
-        </style>
-                            
-    <body>
-        <div class="eniv-screenoff"></div>
-        <div class="eniv-variasi-blur"></div>
-        <div class="eniv-navbar-top">
-            <div class="container">
-                <div class="eniv-navbar-top-content">
-                    <div class="eniv-navbar-top-start"></div>
-                    <div class="eniv-navbar-top-end"></div>
-                </div>
-            </div>
-        </div>
-        <div class="eniv-navbar">
-            <div class="container">
-                <div class="eniv-navbar-content">
-                    <div class="eniv-navbar-start">
-                        <a href="../../index.html" class="eniv-navbar-start-brand">
-                            <img src="../assets/1738000049_1b486829364bfa9d672a.png" alt="">
-                        </a>
-                        <div class="eniv-navbar-start-toggle">
-                            <img src="../assets/menu.svg" alt="">
-                        </div>
-                        <div class="eniv-navbar-admin-toggle">
-                            <img src="../assets/menu-admin.png" alt="">
-                        </div>
-                    </div>
-                    <div class="eniv-navbar-center">
-                        <div class="eniv-navbar-center-brand">
-                            <a href="../../index.html">
-                                <img src="../assets/1738000049_1b486829364bfa9d672a.png" alt="">
-                            </a>
-                        </div>
-                        <div class="eniv-navbar-center-menu">
-                            <a href="../../index.html" class="">Beranda</a>
-                            <a href="../../orders.html" class="">Cek Pesanan</a>
-                            <a href="../../price.html" class="">Daftar Harga</a>
-                        </div>
-                    </div>
-                    <div class="eniv-navbar-end">
-                        <a href="../admin.html" class="eniv-navbar-end-btn py-2 px-3 bg-primary me-3 d-none-mobile">
-                            <i class="fa fa-cog m-0"></i>
-                        </a>
-                        <a href="../users.html" class="eniv-navbar-end-profile">
-                            <span>Akun Saya</span>
-                            <img src="../assets/1738004619_b0319761872079498123.png" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="eniv-navbar-center-menu-mobile">
-                    <a href="../../index.html" class="">
-                        <img src="../assets/home.png" alt="">
-                        Beranda
-                    </a>
-                    <a href="../../orders.html" class="">
-                        <img src="../assets/orders.png" alt="">
-                        Cek Pesanan
-                    </a>
-                    <a href="../../price.html" class="">
-                        <img src="../assets/price.png" alt="">
-                        Daftar Harga
-                    </a>
-                    <a href="../../review.html" class="">
-                        <img src="../assets/review.png" alt="">
-                        Review
-                    </a>
-                    <a href="../../calculator.html" class="">
-                        <img src="../assets/calculator.png" alt="">
-                        Kalkulator ML
-                    </a>
-                    <a href="../../help.html" class="">
-                        <img src="../assets/help.png" alt="">
-                        Hubungi Kami
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="eniv-body">
-            <div class="container">
-                <div class="eniv-content">
-                    <div class="eniv-admin">
-                        <div class="eniv-admin-menu">
-                            <a href="../admin.html" class="eniv-admin-item"><span><i class="fa fa-home"></i></span></a>
-                            <a href="./config.html" class="eniv-admin-item"><span>Konfigurasi</span></a>
-                            <div class="eniv-admin-item">
-                                <span>Akun</span>
-                                <ul>
-                                    <li><a href="./users.html" class="">Kelola Akun</a></li>
-                                    <li><a href="./level.html" class="">Kelola Level</a></li>
-                                    <li><a href="./balance.html" class="">Riwayat Saldo</a></li>
-                                </ul>
-                            </div>
-                            <div class="eniv-admin-item">
-                                <span>Pembelian</span>
-                                <ul>
-                                    <li><a href="./orders/data.html" class="">Data Pembelian</a></li>
-                                    <li><a href="./orders/grid.html" class="">Grid Pembelian</a></li>
-                                    <li><a href="./orders/review.html" class="">Review Pembelian</a></li>
-                                    <li><a href="./orders/report.html" class="">Laporan Pembelian</a></li>
-                                </ul>
-                            </div>
-                            <a href="./topup.html" class="eniv-admin-item"><span>Isi Saldo</span></a>
-                            <div class="eniv-admin-item">
-                                <span>Games</span>
-                                <ul>
-                                    <li><a href="./games/data.html" class="">Kelola Games</a></li>
-                                    <li><a href="./games/category.html" class="">Kelola Kategori</a></li>
-                                    <li><a href="./games/tag.html" class="">Kelola Tag</a></li>
-                                    <li><a href="./games/target.html" class="">Sistem Target</a></li>
-                                </ul>
-                            </div>
-                            <div class="eniv-admin-item">
-                                <span>Produk</span>
-                                <ul>
-                                    <li><a href="./product/data.html" class="">Kelola Produk</a></li>
-                                    <li><a href="./product/flash.html" class="">Flash Sale</a></li>
-                                    <li><a href="./product/category.html" class="">Kelola Kategori</a></li>
-                                    <li><a href="./product/icon.html" class="">Kelola Icon</a></li>
-                                    <li><a href="./product/markup.html" class="">Markup Harga</a></li>
-                                    <li><a href="./product/get.html" class="">Get Produk</a></li>
-                                    <li><a href="./product/config.html" class="">Konfigurasi</a></li>
-                                </ul>
-                            </div>
-                            <div class="eniv-admin-item">
-                                <span>Metode</span>
-                                <ul>
-                                    <li><a href="./method/data.html" class="">Kelola Metode</a></li>
-                                    <li><a href="./method/category.html" class="">Kelola Kategori</a></li>
-                                </ul>
-                            </div>
-                            <a href="./voucher.html" class="eniv-admin-item"><span>Voucher</span></a>
-                            <a href="./banner.html" class="eniv-admin-item"><span>Banner</span></a>
-                            <a href="./news.html" class="eniv-admin-item"><span>Berita</span></a>
-                            <div class="eniv-admin-item">
-                                <span>Notifikasi</span>
-                                <ul>
-                                    <li><a href="./notif/whatsapp.html" class="">Notif Whatsapp</a></li>
-                                    <li><a href="./notif/email.html" class="">Notif Email</a></li>
-                                    <li><a href="./notif/whatsapp/response.html" class="">Response Whatsapp</a></li>
-                                    <li><a href="./notif/email/response.html" class="">Response Email</a></li>
-                                </ul>
-                            </div>
-                            <div class="eniv-admin-item">
-                                <span>Lainnya</span>
-                                <ul>
-                                    <li><a href="./popup.html" class="">Kelola Popup</a></li>
-                                    <li><a href="./otp.html" class="">Kelola OTP</a></li>
-                                    <li><a href="./sosmed.html" class="">Kelola Sosmed</a></li>
-                                    <li><a href="./preference.html" class="">Kelola Tampilan</a></li>
-                                    <li>
-                                        <a href="./pages/help.html" class="">
-                                            Hubungi Kami 
-                                        </a>
-                                    </li>
-                                    <li><a href="./faq/data.html" class="">Pertanyaan Umum</a></li>
-                                    <li><a href="./pages/terms.html" class="">Syarat dan Ketentuan</a></li>
-                                    <li><a href="./pages/privacy.html" class="">Kebijakan Privasi</a></li>
-                                </ul>
-                            </div>
-                        </div>
+ 
                         <div class="eniv-admin-content">                            
                             <div class="eniv-page eniv-page-tools">
                                 <h1>Kelola Akun</h1>
@@ -518,319 +56,40 @@
                                                     <td>2025-02-06 07:24:00</td>
                                                     <td>2025-02-06 07:24:54</td>
                                                     <td width="10" nowrap="">
-                                                        <a href="https://tokoden.id/admin/users/edit/14" class="btn btn-primary btn-sm">Edit</a>
-                                                        <button onclick="hapus(&#39;https://tokoden.id/admin/users/delete/14&#39;);" class="btn btn-danger btn-sm">Hapus</button>
+                                                        <a href="./users/edit.html" class="btn btn-primary btn-sm">Edit</a>
+                                                        <button onclick="hapus();" class="btn btn-danger btn-sm">Hapus</button>
                                                     </td>
-                                                </tr><tr class="even">
-                                                    <td>2</td>
-                                                    <td>
-                                                        <span class="text-white">Muh yusuf</span>
-                                                        <small class="d-block mt-1">
-                                                            abonk1662@gmail.com                                                                                                                    </small>
-                                                    </td>
-                                                    <td>082394253093</td>
-                                                    <td>Rp 1.871</td>
-                                                    <td>Member</td>
-                                                    <td>
-                                                        <span class="badge bg-success">
-                                                            <i class="fa fa-check"></i>
-                                                        </span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge bg-success">On</span>
-                                                    </td>
-                                                    <td>2025-02-04 22:56:08</td>
-                                                    <td>2025-02-08 13:19:10</td>
-                                                    <td width="10" nowrap="">
-                                                        <a href="https://tokoden.id/admin/users/edit/13" class="btn btn-primary btn-sm">Edit</a>
-                                                        <button onclick="hapus(&#39;https://tokoden.id/admin/users/delete/13&#39;);" class="btn btn-danger btn-sm">Hapus</button>
-                                                    </td>
-                                                </tr><tr class="odd">
-                                                    <td>3</td>
-                                                    <td>
-                                                        <span class="text-white">matdbagir</span>
-                                                        <small class="d-block mt-1">
-                                                            goes.iir22@gmail.com                                                                                                                    </small>
-                                                    </td>
-                                                    <td>0895336996770</td>
-                                                    <td>Rp 51.633</td>
-                                                    <td>Member</td>
-                                                    <td>
-                                                        <span class="badge bg-success">
-                                                            <i class="fa fa-check"></i>
-                                                        </span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge bg-success">On</span>
-                                                    </td>
-                                                    <td>2025-02-04 18:05:31</td>
-                                                    <td>2025-02-07 15:11:39</td>
-                                                    <td width="10" nowrap="">
-                                                        <a href="https://tokoden.id/admin/users/edit/12" class="btn btn-primary btn-sm">Edit</a>
-                                                        <button onclick="hapus(&#39;https://tokoden.id/admin/users/delete/12&#39;);" class="btn btn-danger btn-sm">Hapus</button>
-                                                    </td>
-                                                </tr><tr class="even">
-                                                    <td>4</td>
-                                                    <td>
-                                                        <span class="text-white">Riwan</span>
-                                                        <small class="d-block mt-1">
-                                                            novaban13@gmail.com                                                                                                                    </small>
-                                                    </td>
-                                                    <td>089686280778</td>
-                                                    <td>Rp 17.234</td>
-                                                    <td>Member</td>
-                                                    <td>
-                                                        <span class="badge bg-success">
-                                                            <i class="fa fa-check"></i>
-                                                        </span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge bg-success">On</span>
-                                                    </td>
-                                                    <td>2025-02-02 05:27:01</td>
-                                                    <td>2025-02-03 11:51:32</td>
-                                                    <td width="10" nowrap="">
-                                                        <a href="https://tokoden.id/admin/users/edit/11" class="btn btn-primary btn-sm">Edit</a>
-                                                        <button onclick="hapus(&#39;https://tokoden.id/admin/users/delete/11&#39;);" class="btn btn-danger btn-sm">Hapus</button>
-                                                    </td>
-                                                </tr><tr class="odd">
-                                                    <td>5</td>
-                                                    <td>
-                                                        <span class="text-white">lagenggong</span>
-                                                        <small class="d-block mt-1">
-                                                            lagenggong12@gmail.com                                                                                                                    </small>
-                                                    </td>
-                                                    <td>082196975747</td>
-                                                    <td>Rp 3.110</td>
-                                                    <td>Member</td>
-                                                    <td>
-                                                        <span class="badge bg-success">
-                                                            <i class="fa fa-check"></i>
-                                                        </span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge bg-success">On</span>
-                                                    </td>
-                                                    <td>2025-01-31 11:40:51</td>
-                                                    <td>2025-02-04 06:54:43</td>
-                                                    <td width="10" nowrap="">
-                                                        <a href="https://tokoden.id/admin/users/edit/10" class="btn btn-primary btn-sm">Edit</a>
-                                                        <button onclick="hapus(&#39;https://tokoden.id/admin/users/delete/10&#39;);" class="btn btn-danger btn-sm">Hapus</button>
-                                                    </td>
-                                                </tr><tr class="even">
-                                                    <td>6</td>
-                                                    <td>
-                                                        <span class="text-white">dimas altaf</span>
-                                                        <small class="d-block mt-1">
-                                                            dimskuy@gmail.com                                                                                                                    </small>
-                                                    </td>
-                                                    <td>089524483671</td>
-                                                    <td>Rp 310.267</td>
-                                                    <td>Gold</td>
-                                                    <td>
-                                                        <span class="badge bg-success">
-                                                            <i class="fa fa-check"></i>
-                                                        </span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge bg-success">On</span>
-                                                    </td>
-                                                    <td>2025-01-29 00:07:17</td>
-                                                    <td>2025-02-08 17:41:35</td>
-                                                    <td width="10" nowrap="">
-                                                        <a href="https://tokoden.id/admin/users/edit/9" class="btn btn-primary btn-sm">Edit</a>
-                                                        <button onclick="hapus(&#39;https://tokoden.id/admin/users/delete/9&#39;);" class="btn btn-danger btn-sm">Hapus</button>
-                                                    </td>
-                                                </tr><tr class="odd">
-                                                    <td>7</td>
-                                                    <td>
-                                                        <span class="text-white">Arman Maulana</span>
-                                                        <small class="d-block mt-1">
-                                                            slotid001@gmail.com                                                                                                                    </small>
-                                                    </td>
-                                                    <td>083877960443</td>
-                                                    <td>Rp 0</td>
-                                                    <td>Member</td>
-                                                    <td>
-                                                        <span class="badge bg-success">
-                                                            <i class="fa fa-check"></i>
-                                                        </span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge bg-success">On</span>
-                                                    </td>
-                                                    <td>2025-01-28 18:29:10</td>
-                                                    <td>0000-00-00 00:00:00</td>
-                                                    <td width="10" nowrap="">
-                                                        <a href="https://tokoden.id/admin/users/edit/8" class="btn btn-primary btn-sm">Edit</a>
-                                                        <button onclick="hapus(&#39;https://tokoden.id/admin/users/delete/8&#39;);" class="btn btn-danger btn-sm">Hapus</button>
-                                                    </td>
-                                                </tr><tr class="even">
-                                                    <td>8</td>
-                                                    <td>
-                                                        <span class="text-white">erfan kurniawan</span>
-                                                        <small class="d-block mt-1">
-                                                            egappar18@gmail.com                                                                                                                    </small>
-                                                    </td>
-                                                    <td>081242542255</td>
-                                                    <td>Rp 2.806</td>
-                                                    <td>Member</td>
-                                                    <td>
-                                                        <span class="badge bg-success">
-                                                            <i class="fa fa-check"></i>
-                                                        </span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge bg-success">On</span>
-                                                    </td>
-                                                    <td>2024-12-19 06:31:49</td>
-                                                    <td>2024-12-19 06:31:49</td>
-                                                    <td width="10" nowrap="">
-                                                        <a href="https://tokoden.id/admin/users/edit/7" class="btn btn-primary btn-sm">Edit</a>
-                                                        <button onclick="hapus(&#39;https://tokoden.id/admin/users/delete/7&#39;);" class="btn btn-danger btn-sm">Hapus</button>
-                                                    </td>
-                                                </tr><tr class="odd">
-                                                    <td>9</td>
-                                                    <td>
-                                                        <span class="text-white">anuku ireng</span>
-                                                        <small class="d-block mt-1">
-                                                            ruanfauz@gmail.com                                                                                                                    </small>
-                                                    </td>
-                                                    <td>083172221123</td>
-                                                    <td>Rp 201</td>
-                                                    <td>Member</td>
-                                                    <td>
-                                                        <span class="badge bg-success">
-                                                            <i class="fa fa-check"></i>
-                                                        </span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge bg-success">On</span>
-                                                    </td>
-                                                    <td>2024-12-19 06:31:49</td>
-                                                    <td>2025-02-08 02:45:14</td>
-                                                    <td width="10" nowrap="">
-                                                        <a href="https://tokoden.id/admin/users/edit/6" class="btn btn-primary btn-sm">Edit</a>
-                                                        <button onclick="hapus(&#39;https://tokoden.id/admin/users/delete/6&#39;);" class="btn btn-danger btn-sm">Hapus</button>
-                                                    </td>
-                                                </tr><tr class="even">
-                                                    <td>10</td>
-                                                    <td>
-                                                        <span class="text-white">samoro</span>
-                                                        <small class="d-block mt-1">
-                                                            samoro1101@gmail.com                                                                                                                    </small>
-                                                    </td>
-                                                    <td>087862222233</td>
-                                                    <td>Rp 324</td>
-                                                    <td>Member</td>
-                                                    <td>
-                                                        <span class="badge bg-success">
-                                                            <i class="fa fa-check"></i>
-                                                        </span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge bg-success">On</span>
-                                                    </td>
-                                                    <td>2024-12-19 06:31:49</td>
-                                                    <td>2025-01-29 14:51:47</td>
-                                                    <td width="10" nowrap="">
-                                                        <a href="https://tokoden.id/admin/users/edit/5" class="btn btn-primary btn-sm">Edit</a>
-                                                        <button onclick="hapus(&#39;https://tokoden.id/admin/users/delete/5&#39;);" class="btn btn-danger btn-sm">Hapus</button>
-                                                    </td>
-                                                </tr><tr class="odd">
-                                                    <td>11</td>
-                                                    <td>
-                                                        <span class="text-white">aprian putra</span>
-                                                        <small class="d-block mt-1">
-                                                            putra_elite@yahoo.co.id                                                                                                                    </small>
-                                                    </td>
-                                                    <td>081275823286</td>
-                                                    <td>Rp 208</td>
-                                                    <td>Member</td>
-                                                    <td>
-                                                        <span class="badge bg-success">
-                                                            <i class="fa fa-check"></i>
-                                                        </span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge bg-success">On</span>
-                                                    </td>
-                                                    <td>2024-12-19 06:31:49</td>
-                                                    <td>2025-02-08 16:27:33</td>
-                                                    <td width="10" nowrap="">
-                                                        <a href="https://tokoden.id/admin/users/edit/4" class="btn btn-primary btn-sm">Edit</a>
-                                                        <button onclick="hapus(&#39;https://tokoden.id/admin/users/delete/4&#39;);" class="btn btn-danger btn-sm">Hapus</button>
-                                                    </td>
-                                                </tr><tr class="even">
-                                                    <td>12</td>
-                                                    <td>
-                                                        <span class="text-white">Member</span>
-                                                        <small class="d-block mt-1">
-                                                            member@topupzone                                                                                                                    </small>
-                                                    </td>
-                                                    <td>0812345678912</td>
-                                                    <td>Rp 10.000</td>
-                                                    <td>Member</td>
-                                                    <td>
-                                                        <span class="badge bg-success">
-                                                            <i class="fa fa-check"></i>
-                                                        </span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge bg-success">On</span>
-                                                    </td>
-                                                    <td>2024-12-19 06:31:49</td>
-                                                    <td>2024-12-19 06:31:49</td>
-                                                    <td width="10" nowrap="">
-                                                        <a href="https://tokoden.id/admin/users/edit/3" class="btn btn-primary btn-sm">Edit</a>
-                                                        <button onclick="hapus(&#39;https://tokoden.id/admin/users/delete/3&#39;);" class="btn btn-danger btn-sm">Hapus</button>
-                                                    </td>
-                                                </tr><tr class="odd">
-                                                    <td>13</td>
-                                                    <td>
-                                                        <span class="text-white">Administrator</span>
-                                                        <small class="d-block mt-1">
-                                                            admin@topupzone.com                                                                                                                    </small>
-                                                    </td>
-                                                    <td>085654008642</td>
-                                                    <td>Rp 1.278.168</td>
-                                                    <td>Admin</td>
-                                                    <td>
-                                                        <span class="badge bg-success">
-                                                            <i class="fa fa-check"></i>
-                                                        </span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge bg-success">On</span>
-                                                    </td>
-                                                    <td>2024-11-25 12:41:09</td>
-                                                    <td>2025-02-08 19:40:16</td>
-                                                    <td width="10" nowrap="">
-                                                        <a href="https://tokoden.id/admin/users/edit/1" class="btn btn-primary btn-sm">Edit</a>
-                                                        <button onclick="hapus(&#39;https://tokoden.id/admin/users/delete/1&#39;);" class="btn btn-danger btn-sm">Hapus</button>
-                                                    </td>
-                                                </tr></tbody>
-                                        </table><div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 13 of 13 entries</div><div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate"><a class="paginate_button previous disabled" aria-controls="datatable" data-dt-idx="0" tabindex="-1" id="datatable_previous">Previous</a><span><a class="paginate_button current" aria-controls="datatable" data-dt-idx="1" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="datatable" data-dt-idx="2" tabindex="-1" id="datatable_next">Next</a></div></div>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 13 of 13 entries</div>
+                                        <div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate">
+                                            <a class="paginate_button previous disabled" aria-controls="datatable" data-dt-idx="0" tabindex="-1" id="datatable_previous">Previous</a>
+                                            <span><a class="paginate_button current" aria-controls="datatable" data-dt-idx="1" tabindex="0">1</a></span>
+                                            <a class="paginate_button next disabled" aria-controls="datatable" data-dt-idx="2" tabindex="-1" id="datatable_next">Next</a>
+                                        </div>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
-                                            </div>
-                    </div>                                    </div>
+                        </div>
+                    </div>                                    
+                </div>
             </div>
         </div>
         <div class="eniv-footer">
             <div class="container">
                 <div class="row mb-4">
                     <div class="col-lg-6">
-                        <img src="./Kelola Akun - Tokoden_files/1738000049_1b486829364bfa9d672a.png" alt="" height="40">
+                        <img src="../assets/1738000049_1b486829364bfa9d672a.png" alt="" height="40">
                     </div>
                     <div class="col-lg-6">
                         <div class="eniv-footer-method">
-                                                        <img src="./Kelola Akun - Tokoden_files/1738000654_e2a9395885e052c79a15.png" alt="">
-                                                        <img src="./Kelola Akun - Tokoden_files/1732866477_e5f25bbc8ec662b2c2ea.png" alt="">
-                                                        <img src="./Kelola Akun - Tokoden_files/1732866394_5487244033a8de69dcf9.png" alt="">
-                                                        <img src="./Kelola Akun - Tokoden_files/1732866122_2eeb66155a49ffdcc0b1.png" alt="">
-                                                    </div>
+                            <img src="../assets/1738000654_e2a9395885e052c79a15.png" alt="">
+                            <img src="../assets/1732866477_e5f25bbc8ec662b2c2ea.png" alt="">
+                            <img src="../assets/1732866394_5487244033a8de69dcf9.png" alt="">
+                            <img src="../assets/1732866122_2eeb66155a49ffdcc0b1.png" alt="">
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -842,26 +101,26 @@
                     <div class="col-lg-2 col-6">
                         <div class="eniv-footer-menu">
                             <b>Menu Cepat</b>
-                            <a href="https://tokoden.id/">Beranda</a>
-                            <a href="https://tokoden.id/orders">Cek Pesanan</a>
-                            <a href="https://tokoden.id/price">Daftar Harga</a>
-                            <a href="https://tokoden.id/review">Review</a>
-                            <a href="https://tokoden.id/calculator">Kalkulator ML</a>
+                            <a href="../../index.html">Beranda</a>
+                            <a href="../../orders.html">Cek Pesanan</a>
+                            <a href="../../price.html">Daftar Harga</a>
+                            <a href="../../review.html">Review</a>
+                            <a href="../../calculator.html">Kalkulator ML</a>
                         </div>
                     </div>
                     <div class="col-lg-2 col-6">
                         <div class="eniv-footer-menu">
                             <b>Tentang</b>
-                            <a href="https://tokoden.id/help">Hubungi Kami</a>
-                            <a href="https://tokoden.id/terms">Syarat dan Ketentuan</a>
-                            <a href="https://tokoden.id/privacy">Kebijakan Privasi</a>
-                            <a href="https://tokoden.id/faq">Pertanyaan Umum</a>
+                            <a href="../../help.html">Hubungi Kami</a>
+                            <a href="../../terms.html">Syarat dan Ketentuan</a>
+                            <a href="../../privacy.html">Kebijakan Privasi</a>
+                            <a href="../../faq.html">Pertanyaan Umum</a>
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="eniv-footer-menu">
                             <b>Bantuan</b>
-                                                    </div>
+                        </div>
                     </div>
                 </div>
                 <div class="eniv-footer-copyright-mobile">
@@ -870,18 +129,18 @@
             </div>
         </div>
 
-        <script type="text/javascript" async="" charset="utf-8" src="./Kelola Akun - Tokoden_files/recaptcha__en.js.download" crossorigin="anonymous" integrity="sha384-P3vOnwOQjXmCJwx1vTvZAroj9OVXiVWsH201GY3AuWFi+LVyRVQwt0M/4hdSxMBf"></script><script src="./Kelola Akun - Tokoden_files/jquery-3.6.0.min.js.download"></script>
-        <script src="./Kelola Akun - Tokoden_files/jquery-ui.js.download"></script>
-        <script src="./Kelola Akun - Tokoden_files/bootstrap.bundle.min.js.download"></script>
-        <script src="./Kelola Akun - Tokoden_files/owl.carousel.min.js.download"></script>
-        <script src="./Kelola Akun - Tokoden_files/gsap.min.js.download"></script>
-        <script src="./Kelola Akun - Tokoden_files/sweetalert2@11"></script>
-        <script src="./Kelola Akun - Tokoden_files/jquery.dataTables.min.js.download"></script>
-        <script src="./Kelola Akun - Tokoden_files/ckeditor.js.download"></script>
-        <script src="./Kelola Akun - Tokoden_files/api.js.download"></script>
+        <script type="text/javascript" async="" charset="utf-8" src="../assets/recaptcha__en.js.download" crossorigin="anonymous" integrity="sha384-P3vOnwOQjXmCJwx1vTvZAroj9OVXiVWsH201GY3AuWFi+LVyRVQwt0M/4hdSxMBf"></script><script src="../assets/jquery-3.6.0.min.js.download"></script>
+        <script src="../assets/jquery-ui.js.download"></script>
+        <script src="../assets/bootstrap.bundle.min.js.download"></script>
+        <script src="../assets/owl.carousel.min.js.download"></script>
+        <script src="../assets/gsap.min.js.download"></script>
+        <script src="../assets/sweetalert2@11"></script>
+        <script src="../assets/jquery.dataTables.min.js.download"></script>
+        <script src="../assets/ckeditor.js.download"></script>
+        <script src="../assets/api.js.download"></script>
 
         
-                <script>
+        <script>
             function logout() {
                 Swal.fire({
                     title: "Anda yakin?",
@@ -892,13 +151,13 @@
                     cancelButtonText: "Batal"
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location.href = 'https://tokoden.id/logout'
+                        window.location.href = './logout'
                     }
                 });
             }
         </script>
-                <script src="./Kelola Akun - Tokoden_files/codemirror.min.js.download"></script>
-        <script src="./Kelola Akun - Tokoden_files/htmlmixed.min.js.download"></script>
+                <script src="../assets/codemirror.min.js.download"></script>
+        <script src="../assets/htmlmixed.min.js.download"></script>
         <script>
             function random_string(length) {
                 const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -952,28 +211,17 @@
                 }
             });
         </script>
-                
-        
-        
-                <script>
-
-            var base_url = 'https://tokoden.id';
-
-            function salin(text, message) { 
-                
+        <script>
+            var base_url = '.';
+            function salin(text, message) {                 
                 navigator.clipboard.writeText(text); 
-
                 Swal.fire('Berhasil', message, 'success');
             }
 
-            function filterList(keyword) {
-                
-                keyword = keyword.toLowerCase();
-                
-                $('.eniv-pricelist-games li').each(function() {
-                    
-                    const itemText = $(this).find('span').text().toLowerCase();
-                    
+            function filterList(keyword) {                
+                keyword = keyword.toLowerCase();                
+                $('.eniv-pricelist-games li').each(function() {                    
+                    const itemText = $(this).find('span').text().toLowerCase();                    
                     if (itemText.includes(keyword)) {
                         $(this).show();
                     } else {
@@ -983,7 +231,6 @@
             }
 
             function menu_user_hide() {
-
                 var div = $(".eniv-navbar-center-menu-mobile");
                 gsap.to(div, { duration: .2, opacity: 0 });
                 setTimeout(function() {
@@ -992,9 +239,7 @@
             }
 
             $(".eniv-navbar-start-toggle").on('click', function() {
-
-                                                menu_admin_hide();
-                                                    
+                menu_admin_hide();
                 if ($(".eniv-navbar-center-menu-mobile").css('display') == 'none') {
                     var div = $(".eniv-navbar-center-menu-mobile").css('display', 'block');
                     gsap.to(div, { duration: .2, opacity: 1 });
@@ -1004,12 +249,11 @@
             });
         </script>
 
-                            <script>
-                        $("#datatable").DataTable({
-                            pageLength: 25,
-                            ordering: false,
-                        });
-                    </script>
-                    
-    
-</body></html>
+        <!-- <script>
+            $("#datatable").DataTable({
+                pageLength: 25,
+                ordering: false,
+            });
+        </script> -->                    
+</body>
+</html>
