@@ -3,7 +3,7 @@
     <head>
         
         <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Data Pembelian - Tokoden</title>    
+            <title>Laporan Pembelian - Tokoden</title>    
             <link rel="preconnect" href="https://fonts.googleapis.com/">
             <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap">
@@ -463,73 +463,204 @@
                         </div>
                         <div class="eniv-admin-content">                            
                             <div class="eniv-page eniv-page-tools">
-                                <h1>Data Pembelian</h1>
+                                <h1>Laporan Pembelian</h1>
                             </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <div id="datatable_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length" aria-controls="datatable" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="datatable_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="datatable"></label></div><table class="table dataTable no-footer" id="datatable" aria-describedby="datatable_info" style="width: 1005px;">
-                                            <thead>
-                                                <tr>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 30px;">No</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 153px;">Akun</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 68px;">Order ID</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 217px;">Produk</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 74px;">Harga</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 83px;">Status</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 157px;">Tanggal</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 63px;">Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="odd">
-                                                    <td>1</td>
-                                                    <td>dimas altaf<small class="d-block mt-1">dimskuy@gmail.com</small></td>
-                                                    <td>#TD392</td>
-                                                    <td>VIP 40K + 260M Koin<small class="d-block mt-1">HGI</small></td>
-                                                    <td>Rp 36.799</td><td><span class="badge bg-success">Success</span></td>
-                                                    <td>2025-02-08 21:00:32</td>
-                                                    <td>
-                                                        <div class="dropdown">
-                                                        <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-bars"></i></button>
-                                                        <ul class="dropdown-menu" style="">
-                                                            <li>
-                                                                <a href="./detail.html" class="dropdown-item">Lihat Detail</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="./edit.html" class="dropdown-item">Edit Pembelian</a>
-                                                            </li>
-                                                            <li>
-                                                                <button onclick="hapus();" class="dropdown-item">Hapus Pembelian</button>
-                                                            </li>
-                                                        </ul>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 25 of 281 entries</div>
-                                        <div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate">
-                                            <a class="paginate_button previous disabled" aria-controls="datatable" data-dt-idx="0" tabindex="-1" id="datatable_previous">Previous</a>
-                                            <span>
-                                                <a class="paginate_button current" aria-controls="datatable" data-dt-idx="1" tabindex="0">1</a>
-                                                <a class="paginate_button " aria-controls="datatable" data-dt-idx="2" tabindex="0">2</a>
-                                                <a class="paginate_button " aria-controls="datatable" data-dt-idx="3" tabindex="0">3</a>
-                                                <a class="paginate_button " aria-controls="datatable" data-dt-idx="4" tabindex="0">4</a>
-                                                <a class="paginate_button " aria-controls="datatable" data-dt-idx="5" tabindex="0">5</a>
-                                                <span class="ellipsis">…</span>
-                                                <a class="paginate_button " aria-controls="datatable" data-dt-idx="6" tabindex="0">12</a>
-                                            </span>
-                                            <a class="paginate_button next" aria-controls="datatable" data-dt-idx="7" tabindex="0" id="datatable_next">Next</a>
+                            <div class="row mb-4">
+                                <div class="col-lg-8">
+                                    <form action="/" method="POST">
+                                        <div class="input-group">
+                                            <input type="date" class="form-control" name="date_start" value="2025-02-01">
+                                            <input type="date" class="form-control" name="date_end" value="2025-02-08">
+                                            <button class="btn btn-primary" type="submit" name="tombol" value="submit">Filter</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="eniv-statistic">
+                                                <div>
+                                                    <p>Total Keseluruhan Transaksi</p>
+                                                    <h1>196</h1>
+                                                </div>
+                                                <div class="eniv-statistic-icon">
+                                                    <i class="fa fa-shopping-cart"></i>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="eniv-statistic">
+                                                <div>
+                                                    <p>Nominal Keseluruhan Transaksi</p>
+                                                    <h1>Rp 4.083.092</h1>
+                                                </div>
+                                                <div class="eniv-statistic-icon">Rp</div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                                            
-                        </div>
-                    </div>                                    
-                </div>
+                            <div class="row mb-4">
+                                <b class="d-block mb-2 text-white">Nominal Transaksi</b>
+                                <div class="col-lg-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="eniv-statistic">
+                                                <div>
+                                                    <p>Berdasarkan Status <span class="badge bg-warning">Pending</span></p>
+                                                    <h1>0 <sub class="ms-1"><small>Rp 0</small></sub></h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="eniv-statistic">
+                                                <div>
+                                                    <p>Berdasarkan Status <span class="badge bg-primary">Processing</span></p>
+                                                    <h1>6 <sub class="ms-1"><small>Rp 120.430</small></sub></h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="eniv-statistic">
+                                                <div>
+                                                    <p>Berdasarkan Status <span class="badge bg-success">Success</span></p>
+                                                    <h1>180 <sub class="ms-1"><small>Rp 3.869.987</small></sub></h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="eniv-statistic">
+                                                <div>
+                                                    <p>Berdasarkan Status <span class="badge bg-danger">Canceled</span></p>
+                                                    <h1>10 <sub class="ms-1"><small>Rp 92.675</small></sub></h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <b class="d-block mb-2 text-white">Nominal Modal</b>
+                                <div class="col-lg-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="eniv-statistic">
+                                                <div>
+                                                    <p>Berdasarkan Status <span class="badge bg-warning">Pending</span></p>
+                                                    <h1>Rp 0</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="eniv-statistic">
+                                                <div>
+                                                    <p>Berdasarkan Status <span class="badge bg-primary">Processing</span></p>
+                                                    <h1>Rp 1.794</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="eniv-statistic">
+                                                <div>
+                                                    <p>Berdasarkan Status <span class="badge bg-success">Success</span></p>
+                                                    <h1>Rp 3.098.686</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="eniv-statistic">
+                                                <div>
+                                                    <p>Berdasarkan Status <span class="badge bg-danger">Canceled</span></p>
+                                                    <h1>Rp 44.583</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <b class="d-block mb-2 text-white">Nominal Keuntungan</b>
+                                <div class="col-lg-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="eniv-statistic">
+                                                <div>
+                                                    <p>Berdasarkan Status <span class="badge bg-warning">Pending</span></p>
+                                                    <h1>Rp 0</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="eniv-statistic">
+                                                <div>
+                                                    <p>Berdasarkan Status <span class="badge bg-primary">Processing</span></p>
+                                                    <h1>Rp 118.636</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="eniv-statistic">
+                                                <div>
+                                                    <p>Berdasarkan Status <span class="badge bg-success">Success</span></p>
+                                                    <h1>Rp 771.301</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="eniv-statistic">
+                                                <div>
+                                                    <p>Berdasarkan Status <span class="badge bg-danger">Canceled</span></p>
+                                                    <h1>Rp 48.092</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                            </div>
+                    </div>                                    </div>
             </div>
         </div>
         <div class="eniv-footer">
@@ -703,11 +834,6 @@
                 }
             });
         </script>    
-        <!-- <script>
-            $("#datatable").DataTable({
-                pageLength: 25,
-                ordering: false,
-            });
-        </script> -->          
+                        
 </body>
 </html>

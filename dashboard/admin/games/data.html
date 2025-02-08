@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        
+    <head>        
         <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Data Pembelian - Tokoden</title>    
+            <title>Kelola Games - Tokoden</title>    
             <link rel="preconnect" href="https://fonts.googleapis.com/">
             <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap">
@@ -463,73 +462,74 @@
                         </div>
                         <div class="eniv-admin-content">                            
                             <div class="eniv-page eniv-page-tools">
-                                <h1>Data Pembelian</h1>
+                                <h1>Kelola Games</h1>
+                                <a href="./data/add.html" class="btn btn-primary">Tambah Games</a>
                             </div>
                             <div class="card">
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                        <div id="datatable_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length" aria-controls="datatable" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="datatable_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="datatable"></label></div><table class="table dataTable no-footer" id="datatable" aria-describedby="datatable_info" style="width: 1005px;">
+                                        <div id="datatable_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length" aria-controls="datatable" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="datatable_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="datatable"></label></div><table class="table dataTable no-footer" id="datatable" aria-describedby="datatable_info">
                                             <thead>
-                                                <tr>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 30px;">No</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 153px;">Akun</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 68px;">Order ID</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 217px;">Produk</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 74px;">Harga</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 83px;">Status</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 157px;">Tanggal</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 63px;">Action</th>
-                                                </tr>
+                                                <tr><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 35.7188px;">No</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 307.438px;">Nama Games</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 139.594px;">Kategori</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 87.9688px;">Gambar</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 95.1406px;">Banner</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 69.25px;">Status</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 122.891px;">Action</th></tr>
                                             </thead>
-                                            <tbody>
-                                                <tr class="odd">
+                                            <tbody id="sortable" class="ui-sortable">
+                                                <tr id="18" class="odd ui-sortable-handle" style="">
                                                     <td>1</td>
-                                                    <td>dimas altaf<small class="d-block mt-1">dimskuy@gmail.com</small></td>
-                                                    <td>#TD392</td>
-                                                    <td>VIP 40K + 260M Koin<small class="d-block mt-1">HGI</small></td>
-                                                    <td>Rp 36.799</td><td><span class="badge bg-success">Success</span></td>
-                                                    <td>2025-02-08 21:00:32</td>
+                                                    <td>Viu Premium (Kode Voucher)</td>
+                                                    <td>Entertainment</td>
                                                     <td>
-                                                        <div class="dropdown">
-                                                        <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-bars"></i></button>
-                                                        <ul class="dropdown-menu" style="">
-                                                            <li>
-                                                                <a href="./detail.html" class="dropdown-item">Lihat Detail</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="./edit.html" class="dropdown-item">Edit Pembelian</a>
-                                                            </li>
-                                                            <li>
-                                                                <button onclick="hapus();" class="dropdown-item">Hapus Pembelian</button>
-                                                            </li>
-                                                        </ul>
+                                                        <img src="../../assets/1732798673_b5d870a4b70b885693c7.png" alt="" height="22">
+                                                    </td>
+                                                    <td>
+                                                        <img src="../../assets/1732798673_8fd49f2fb822ce6f2d6d.png" alt="" height="22">
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox" role="switch" id="status-18" onclick="update_status(&#39;18&#39;);">
                                                         </div>
+                                                    </td>
+                                                    <td width="10" nowrap="">
+                                                        <a href="./data/edit.html" class="btn btn-primary btn-sm">Edit</a>
+                                                        <button onclick="hapus();" class="btn btn-danger btn-sm">Hapus</button>
+                                                    </td>
+                                                </tr>
+                                                <tr id="2" class="even ui-sortable-handle">
+                                                    <td>2</td>
+                                                    <td>Mobile Legends</td>
+                                                    <td>Games Mobile</td>
+                                                    <td>
+                                                        <img src="../../assets/1732796160_5ee48bbf65aac4507419.png" alt="" height="22">
+                                                    </td>
+                                                    <td>
+                                                        <img src="../../assets/1732796160_e2b6f8b5df06d8fca65b.png" alt="" height="22">
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox" role="switch" id="status-2" onclick="update_status(&#39;2&#39;);">
+                                                        </div>
+                                                    </td>
+                                                    <td width="10" nowrap="">
+                                                        <a href="./data/edit.html" class="btn btn-primary btn-sm">Edit</a>
+                                                        <button onclick="hapus();" class="btn btn-danger btn-sm">Hapus</button>
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 25 of 281 entries</div>
+                                        <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 25 of 26 entries</div>
                                         <div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate">
                                             <a class="paginate_button previous disabled" aria-controls="datatable" data-dt-idx="0" tabindex="-1" id="datatable_previous">Previous</a>
-                                            <span>
-                                                <a class="paginate_button current" aria-controls="datatable" data-dt-idx="1" tabindex="0">1</a>
-                                                <a class="paginate_button " aria-controls="datatable" data-dt-idx="2" tabindex="0">2</a>
-                                                <a class="paginate_button " aria-controls="datatable" data-dt-idx="3" tabindex="0">3</a>
-                                                <a class="paginate_button " aria-controls="datatable" data-dt-idx="4" tabindex="0">4</a>
-                                                <a class="paginate_button " aria-controls="datatable" data-dt-idx="5" tabindex="0">5</a>
-                                                <span class="ellipsis">…</span>
-                                                <a class="paginate_button " aria-controls="datatable" data-dt-idx="6" tabindex="0">12</a>
-                                            </span>
-                                            <a class="paginate_button next" aria-controls="datatable" data-dt-idx="7" tabindex="0" id="datatable_next">Next</a>
+                                            <span><a class="paginate_button current" aria-controls="datatable" data-dt-idx="1" tabindex="0">1</a>
+                                                <a class="paginate_button " aria-controls="datatable" data-dt-idx="2" tabindex="0">2</a></span>
+                                                <a class="paginate_button next" aria-controls="datatable" data-dt-idx="3" tabindex="0" id="datatable_next">Next</a>
+                                            </div>
                                         </div>
-                                    </div>
                                     </div>
                                 </div>
                             </div>
-                                            
+                                           
                         </div>
-                    </div>                                    
-                </div>
+                    </div>                                  
+                  </div>
             </div>
         </div>
         <div class="eniv-footer">
@@ -702,12 +702,52 @@
                     menu_user_hide();
                 }
             });
-        </script>    
-        <!-- <script>
+        </script>  
+
+        <script>
             $("#datatable").DataTable({
                 pageLength: 25,
                 ordering: false,
             });
-        </script> -->          
+
+            function update_status(id) {
+
+                if ($("#status-" + id).is(':checked') == true) {
+                    var status = 'On';
+                } else {
+                    var status = 'Off';
+                }
+
+                $.ajax({
+                    url: '/' + id + '/' + status,
+                });
+            }
+
+            $("#sortable").sortable({
+                stop: function() {
+                    var ids = '';
+                    $("#sortable tr").each(function() {
+                        
+                        id = $(this).attr('id');
+                        if (ids == '') {
+                            ids = id;
+                        } else {
+                            ids = ids + ',' + id;
+                        }
+                    });
+                    
+                    $.ajax({
+                        url: '/',
+                        type: 'POST',
+                        dataType: 'html',
+                        data: 'id=' + ids,
+                        success: function(result) {                            
+                        }
+                    });
+                }
+            });
+        </script>
+                    
+    
 </body>
 </html>

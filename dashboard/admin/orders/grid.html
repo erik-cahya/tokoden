@@ -3,7 +3,7 @@
     <head>
         
         <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Data Pembelian - Tokoden</title>    
+            <title>Grid Pembelian - Tokoden</title>    
             <link rel="preconnect" href="https://fonts.googleapis.com/">
             <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap">
@@ -463,66 +463,179 @@
                         </div>
                         <div class="eniv-admin-content">                            
                             <div class="eniv-page eniv-page-tools">
-                                <h1>Data Pembelian</h1>
+                                <h1>Grid Pembelian</h1>
                             </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <div id="datatable_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length" aria-controls="datatable" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="datatable_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="datatable"></label></div><table class="table dataTable no-footer" id="datatable" aria-describedby="datatable_info" style="width: 1005px;">
-                                            <thead>
-                                                <tr>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 30px;">No</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 153px;">Akun</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 68px;">Order ID</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 217px;">Produk</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 74px;">Harga</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 83px;">Status</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 157px;">Tanggal</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 63px;">Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="odd">
-                                                    <td>1</td>
-                                                    <td>dimas altaf<small class="d-block mt-1">dimskuy@gmail.com</small></td>
-                                                    <td>#TD392</td>
-                                                    <td>VIP 40K + 260M Koin<small class="d-block mt-1">HGI</small></td>
-                                                    <td>Rp 36.799</td><td><span class="badge bg-success">Success</span></td>
-                                                    <td>2025-02-08 21:00:32</td>
-                                                    <td>
-                                                        <div class="dropdown">
-                                                        <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-bars"></i></button>
-                                                        <ul class="dropdown-menu" style="">
-                                                            <li>
-                                                                <a href="./detail.html" class="dropdown-item">Lihat Detail</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="./edit.html" class="dropdown-item">Edit Pembelian</a>
-                                                            </li>
-                                                            <li>
-                                                                <button onclick="hapus();" class="dropdown-item">Hapus Pembelian</button>
-                                                            </li>
-                                                        </ul>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 25 of 281 entries</div>
-                                        <div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate">
-                                            <a class="paginate_button previous disabled" aria-controls="datatable" data-dt-idx="0" tabindex="-1" id="datatable_previous">Previous</a>
-                                            <span>
-                                                <a class="paginate_button current" aria-controls="datatable" data-dt-idx="1" tabindex="0">1</a>
-                                                <a class="paginate_button " aria-controls="datatable" data-dt-idx="2" tabindex="0">2</a>
-                                                <a class="paginate_button " aria-controls="datatable" data-dt-idx="3" tabindex="0">3</a>
-                                                <a class="paginate_button " aria-controls="datatable" data-dt-idx="4" tabindex="0">4</a>
-                                                <a class="paginate_button " aria-controls="datatable" data-dt-idx="5" tabindex="0">5</a>
-                                                <span class="ellipsis">…</span>
-                                                <a class="paginate_button " aria-controls="datatable" data-dt-idx="6" tabindex="0">12</a>
-                                            </span>
-                                            <a class="paginate_button next" aria-controls="datatable" data-dt-idx="7" tabindex="0" id="datatable_next">Next</a>
+                            <div class="row mb-4">
+                                <div class="col-lg-5">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <form action="/" id="form-search">
+                                                <div class="input-group">
+                                                    <select name="field" class="form-control" style="max-width: 120px;">
+                                                        <option value="order_id">Order ID</option>
+                                                    </select>
+                                                    <input type="text" class="form-control" autocomplete="off" name="search" placeholder="Pencarian">
+                                                    <button class="btn btn-primary" type="button" onclick="filter();"><i class="fa fa-search"></i></button>
+                                                </div>
+                                            </form>
+                                            <div class="eniv-orders">
+                                                <div class="eniv-orders-list" onclick="detail();">
+                                                    <div class="eniv-orders-list-head">
+                                                    <h1>#TD392</h1>
+                                                    <span class="badge bg-success">Success</span>
+                                                    </div>
+                                                    <div class="eniv-orders-list-body">
+                                                    <h1>HGI - VIP 40K + 260M Koin</h1>
+                                                    <ul>
+                                                        <li><b>ID Player</b> : 159540161</li>
+                                                    </ul>
+                                                    </div>
+                                                    <div class="eniv-orders-list-footer">
+                                                        2025-02-08 21:00:32    
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="eniv-orders-detail-result">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="eniv-table border">
+                                                    <table class="table">
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>Nama Akun</th>
+                                                                <td>:</td>
+                                                                <td>dimas altaf</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Email Akun</th>
+                                                                <td>:</td>
+                                                                <td>dimskuy@gmail.com</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>No. Whatsapp</th>
+                                                                <td>:</td>
+                                                                <td>08123123123</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Order ID</th>
+                                                                <td>:</td>
+                                                                <td>
+                                                                    #TD392                            
+                                                                    <i class="fa fa-copy ms-1" onclick="salin(&#39;#TD392&#39;, &#39;Order ID berhasil disalin&#39;);"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Produk</th>
+                                                                <td>:</td>
+                                                                <td>VIP 40K + 260M Koin</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Games</th>
+                                                                <td>:</td>
+                                                                <td>HGI</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Metode Pembayaran</th>
+                                                                <td>:</td>
+                                                                <td>TD CASH</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Target</th>
+                                                                <td>:</td>
+                                                                <td>
+                                                                    <ul class="mb-0 ps-2">
+                                                                        <li><b>ID Player</b> : 159540161</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Nickname</th>
+                                                                <td>:</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Harga Modal</th>
+                                                                <td>:</td>
+                                                                <td>Rp 36.799</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Harga Produk</th>
+                                                                <td>:</td>
+                                                                <td>Rp 36.799</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Biaya Admin</th>
+                                                                <td>:</td>
+                                                                <td>Rp 0</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Kode Unik</th>
+                                                                <td>:</td>
+                                                                <td>Rp 0</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Diskon</th>
+                                                                <td>:</td>
+                                                                <td>Rp 0</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Voucher</th>
+                                                                <td>:</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Total</th>
+                                                                <td>:</td>
+                                                                <td>Rp 36.799</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Status Pembelian</th>
+                                                                <td>:</td>
+                                                                <td>
+                                                                    <span class="badge bg-success">Success</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Status Pembayaran</th>
+                                                                <td>:</td>
+                                                                <td>
+                                                                    <span class="badge bg-success">Paid</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Catatan</th>
+                                                                <td>:</td>
+                                                                <td>31307366</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>IP</th>
+                                                                <td>:</td>
+                                                                <td>125.165.110.223</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Provider</th>
+                                                                <td>:</td>
+                                                                <td>DigiFlazz</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Tanggal</th>
+                                                                <td>:</td>
+                                                                <td>2025-02-08 21:00:32</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Terupdate</th>
+                                                                <td>:</td>
+                                                                <td>2025-02-08 21:00:32</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -593,8 +706,6 @@
         <script src="../../assets/jquery.dataTables.min.js.download"></script>
         <script src="../../assets/ckeditor.js.download"></script>
         <script src="../../assets/api.js.download"></script>
-
-        
         <script>
             function logout() {
                 Swal.fire({
@@ -702,12 +813,44 @@
                     menu_user_hide();
                 }
             });
-        </script>    
-        <!-- <script>
-            $("#datatable").DataTable({
-                pageLength: 25,
-                ordering: false,
-            });
-        </script> -->          
+        </script>  
+
+        <script>
+            function load_data(data = '') {
+
+                $.ajax({
+                    url: '/',
+                    type: 'POST',
+                    data: data,
+                    dataType: 'html',
+                    success: function(result) {
+                        $(".eniv-orders").html(result);
+                    }
+                });
+            }
+
+            function detail(order_id = '') {
+
+                $.ajax({
+                    url: '/',
+                    type: 'POST',
+                    data: {
+                        order_id: order_id,
+                    },
+                    dataType: 'html',
+                    success: function(result) {
+                        $(".eniv-orders-detail-result").html(result);
+                    }
+                });
+            }
+
+            function filter() {
+                var data_filter = $("#form-search").serialize();                
+                load_data(data_filter);
+            }
+            load_data();
+        </script>
+                    
+    
 </body>
 </html>
