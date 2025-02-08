@@ -463,70 +463,48 @@
                         </div>
                         <div class="eniv-admin-content">                            
                             <div class="eniv-page eniv-page-tools">
-                                <h1>Data Pembelian</h1>
+                                <h1>Get Produk</h1>
                             </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <div id="datatable_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length" aria-controls="datatable" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="datatable_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="datatable"></label></div><table class="table dataTable no-footer" id="datatable" aria-describedby="datatable_info" style="width: 1005px;">
-                                            <thead>
-                                                <tr>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 30px;">No</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 153px;">Akun</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 68px;">Order ID</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 217px;">Produk</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 74px;">Harga</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 83px;">Status</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 157px;">Tanggal</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 63px;">Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="odd">
-                                                    <td>1</td>
-                                                    <td>dimas altaf<small class="d-block mt-1">dimskuy@gmail.com</small></td>
-                                                    <td>#TD392</td>
-                                                    <td>VIP 40K + 260M Koin<small class="d-block mt-1">HGI</small></td>
-                                                    <td>Rp 36.799</td><td><span class="badge bg-success">Success</span></td>
-                                                    <td>2025-02-08 21:00:32</td>
-                                                    <td>
-                                                        <div class="dropdown">
-                                                        <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-bars"></i></button>
-                                                        <ul class="dropdown-menu" style="">
-                                                            <li>
-                                                                <a href="./detail.html" class="dropdown-item">Lihat Detail</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="./edit.html" class="dropdown-item">Edit Pembelian</a>
-                                                            </li>
-                                                            <li>
-                                                                <button onclick="hapus();" class="dropdown-item">Hapus Pembelian</button>
-                                                            </li>
-                                                        </ul>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 25 of 281 entries</div>
-                                        <div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate">
-                                            <a class="paginate_button previous disabled" aria-controls="datatable" data-dt-idx="0" tabindex="-1" id="datatable_previous">Previous</a>
-                                            <span>
-                                                <a class="paginate_button current" aria-controls="datatable" data-dt-idx="1" tabindex="0">1</a>
-                                                <a class="paginate_button " aria-controls="datatable" data-dt-idx="2" tabindex="0">2</a>
-                                                <a class="paginate_button " aria-controls="datatable" data-dt-idx="3" tabindex="0">3</a>
-                                                <a class="paginate_button " aria-controls="datatable" data-dt-idx="4" tabindex="0">4</a>
-                                                <a class="paginate_button " aria-controls="datatable" data-dt-idx="5" tabindex="0">5</a>
-                                                <span class="ellipsis">…</span>
-                                                <a class="paginate_button " aria-controls="datatable" data-dt-idx="6" tabindex="0">12</a>
-                                            </span>
-                                            <a class="paginate_button next" aria-controls="datatable" data-dt-idx="7" tabindex="0" id="datatable_next">Next</a>
+                            <div class="row mb-4 justify-content-center">
+                                <div class="col-lg-5">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text ps-4">
+                                                    <i class="fa fa-search"></i>
+                                                </span>
+                                                <input type="text" class="form-control ps-2" autocomplete="off" name="search" placeholder="Cari Games..." onkeyup="filterList(this.value);">
+                                            </div>
+                                            <div class="alert alert-warning">
+                                                Ada games yang tidak tampil? pastikan kamu sudah menambahkannya pada menu Produk -&gt; Markup. Pastikan tidak duplikat
+                                            </div>
+                                            <ul class="eniv-pricelist-games">
+                                                                                                
+                                                <li onclick="get_detail(&#39;3&#39;);">
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../../assets/1732796181_7c8732112654094441ab.png" alt="" class="me-2">
+                                                        <span>Free Fire</span>
+                                                    </div>
+                                                    <i class="fa fa-chevron-right"></i>
+                                                </li>
+                                                                                                
+                                                
+                                                                                            
+                                            </ul>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="text-center d-none pt-4" id="preloader">
+                                        <div class="spinner-border text-primary" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div>
+                                    </div>
+                                    <div id="result">
                                     </div>
                                 </div>
                             </div>
-                                            
+                
                         </div>
                     </div>                                    
                 </div>
@@ -703,11 +681,42 @@
                 }
             });
         </script>    
-        <!-- <script>
-            $("#datatable").DataTable({
-                pageLength: 25,
-                ordering: false,
-            });
-        </script> -->          
-</body>
-</html>
+        <script>
+            function get_detail(id) {
+                $.ajax({
+                    url: '/' + id,
+                    beforeSend: function() {
+                        $("#preloader").removeClass('d-none');
+
+                        $("#result").html(' ');
+                    },
+                    success: function(result) {
+                        $("#preloader").addClass('d-none');
+
+                        $("#result").html(result);
+                    }
+                });
+            }
+            function get_start() {
+
+                var data = $("#form-get").serialize();
+
+                $.ajax({
+                    url: '/',
+                    data: data,
+                    type: 'POST',
+                    dataType: 'json',
+                    success: function(result) {
+                        
+                        if (result.status == true) {
+                            Swal.fire('Berhasil', result.message, 'success');
+                        } else {
+                            Swal.fire('Terjadi Kesalahan', result.message, 'error');
+                        }
+                    }
+                })
+            }
+        </script>
+                    
+    
+</body></html>
