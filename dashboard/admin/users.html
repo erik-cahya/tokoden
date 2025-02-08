@@ -1,259 +1,276 @@
- 
-                        <div class="eniv-admin-content">                            
-                            <div class="eniv-page eniv-page-tools">
-                                <h1>Kelola Akun</h1>
-                            </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <div id="datatable_wrapper" class="dataTables_wrapper no-footer">
-                                            <div class="dataTables_length" id="datatable_length">
-                                                <label>Show 
-                                                    <select name="datatable_length" aria-controls="datatable" class="">
-                                                        <option value="10">10</option>
-                                                        <option value="25">25</option>
-                                                        <option value="50">50</option>
-                                                        <option value="100">100</option>
-                                                    </select> entries
-                                                </label>
-                                            </div>
-                                            <div id="datatable_filter" class="dataTables_filter">
-                                                <label>Search:<input type="search" class="" placeholder="" aria-controls="datatable"></label>
-                                            </div>
-                                            <table class="table dataTable no-footer" id="datatable" aria-describedby="datatable_info">
-                                            <thead>
-                                                <tr>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 18.4062px;">No</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 146.984px;">Akun</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 101.109px;">No. Whatsapp</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 62.1406px;">Saldo</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 52.75px;">Level</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 60.7188px;">Verifikasi</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 41.4844px;">Status</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 93.2969px;">Terdaftar</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 98.2188px;">Login</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 122.891px;">Action</th></tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="odd">
-                                                    <td>1</td>
-                                                    <td>
-                                                        <span class="text-white">Abaha</span>
-                                                        <small class="d-block mt-1">
-                                                            dondoprakerja@gmail.com                                                                                                                    </small>
-                                                    </td>
-                                                    <td>0895324711406</td>
-                                                    <td>Rp 0</td>
-                                                    <td>Member</td>
-                                                    <td>
-                                                        <span class="badge bg-success">
-                                                            <i class="fa fa-check"></i>
-                                                        </span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge bg-success">On</span>
-                                                    </td>
-                                                    <td>2025-02-06 07:24:00</td>
-                                                    <td>2025-02-06 07:24:54</td>
-                                                    <td width="10" nowrap="">
-                                                        <a href="./users/edit.html" class="btn btn-primary btn-sm">Edit</a>
-                                                        <button onclick="hapus();" class="btn btn-danger btn-sm">Hapus</button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 13 of 13 entries</div>
-                                        <div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate">
-                                            <a class="paginate_button previous disabled" aria-controls="datatable" data-dt-idx="0" tabindex="-1" id="datatable_previous">Previous</a>
-                                            <span><a class="paginate_button current" aria-controls="datatable" data-dt-idx="1" tabindex="0">1</a></span>
-                                            <a class="paginate_button next disabled" aria-controls="datatable" data-dt-idx="2" tabindex="-1" id="datatable_next">Next</a>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                                    
+<div class="eniv-admin-content">
+    <div class="eniv-page eniv-page-tools">
+        <h1>Kelola Akun</h1>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <div id="datatable_wrapper" class="dataTables_wrapper no-footer">
+                    <div class="dataTables_length" id="datatable_length">
+                        <label>Show
+                            <select name="datatable_length" aria-controls="datatable" class="">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select> entries
+                        </label>
+                    </div>
+                    <div id="datatable_filter" class="dataTables_filter">
+                        <label>Search:<input type="search" class="" placeholder="" aria-controls="datatable"></label>
+                    </div>
+                    <table class="table dataTable no-footer" id="datatable" aria-describedby="datatable_info">
+                        <thead>
+                            <tr>
+                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 18.4062px;">No</th>
+                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 146.984px;">Akun</th>
+                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 101.109px;">No.
+                                    Whatsapp</th>
+                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 62.1406px;">Saldo
+                                </th>
+                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 52.75px;">Level</th>
+                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 60.7188px;">
+                                    Verifikasi</th>
+                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 41.4844px;">Status
+                                </th>
+                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 93.2969px;">Terdaftar
+                                </th>
+                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 98.2188px;">Login
+                                </th>
+                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 122.891px;">Action
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd">
+                                <td>1</td>
+                                <td>
+                                    <span class="text-white">Abaha</span>
+                                    <small class="d-block mt-1">
+                                        dondoprakerja@gmail.com </small>
+                                </td>
+                                <td>0895324711406</td>
+                                <td>Rp 0</td>
+                                <td>Member</td>
+                                <td>
+                                    <span class="badge bg-success">
+                                        <i class="fa fa-check"></i>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="badge bg-success">On</span>
+                                </td>
+                                <td>2025-02-06 07:24:00</td>
+                                <td>2025-02-06 07:24:54</td>
+                                <td width="10" nowrap="">
+                                    <a href="./users/edit.html" class="btn btn-primary btn-sm">Edit</a>
+                                    <button onclick="hapus();" class="btn btn-danger btn-sm">Hapus</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 13 of
+                        13 entries</div>
+                    <div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate">
+                        <a class="paginate_button previous disabled" aria-controls="datatable" data-dt-idx="0"
+                            tabindex="-1" id="datatable_previous">Previous</a>
+                        <span><a class="paginate_button current" aria-controls="datatable" data-dt-idx="1"
+                                tabindex="0">1</a></span>
+                        <a class="paginate_button next disabled" aria-controls="datatable" data-dt-idx="2" tabindex="-1"
+                            id="datatable_next">Next</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="eniv-footer">
-            <div class="container">
-                <div class="row mb-4">
-                    <div class="col-lg-6">
-                        <img src="../assets/1738000049_1b486829364bfa9d672a.png" alt="" height="40">
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="eniv-footer-method">
-                            <img src="../assets/1738000654_e2a9395885e052c79a15.png" alt="">
-                            <img src="../assets/1732866477_e5f25bbc8ec662b2c2ea.png" alt="">
-                            <img src="../assets/1732866394_5487244033a8de69dcf9.png" alt="">
-                            <img src="../assets/1732866122_2eeb66155a49ffdcc0b1.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="eniv-footer-description">
-                            Tokoden adalah platform terpercaya untuk top-up berbagai game favorit Anda. Dengan proses cepat, harga bersaing, dan layanan yang mudah digunakan, Tokoden menjadi solusi terbaik untuk kebutuhan top-up Anda.                        </div>
-                        <p class="eniv-footer-copyright">Copyright © 2025 Tokoden - All Right Reserved</p>
-                    </div>
-                    <div class="col-lg-2 col-6">
-                        <div class="eniv-footer-menu">
-                            <b>Menu Cepat</b>
-                            <a href="../../index.html">Beranda</a>
-                            <a href="../../orders.html">Cek Pesanan</a>
-                            <a href="../../price.html">Daftar Harga</a>
-                            <a href="../../review.html">Review</a>
-                            <a href="../../calculator.html">Kalkulator ML</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-6">
-                        <div class="eniv-footer-menu">
-                            <b>Tentang</b>
-                            <a href="../../help.html">Hubungi Kami</a>
-                            <a href="../../terms.html">Syarat dan Ketentuan</a>
-                            <a href="../../privacy.html">Kebijakan Privasi</a>
-                            <a href="../../faq.html">Pertanyaan Umum</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="eniv-footer-menu">
-                            <b>Bantuan</b>
-                        </div>
-                    </div>
-                </div>
-                <div class="eniv-footer-copyright-mobile">
-                    Copyright © 2025 Tokoden - All Right Reserved
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="eniv-footer">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-lg-6">
+                <img src="../assets/1738000049_1b486829364bfa9d672a.png" alt="" height="40">
+            </div>
+            <div class="col-lg-6">
+                <div class="eniv-footer-method">
+                    <img src="../assets/1738000654_e2a9395885e052c79a15.png" alt="">
+                    <img src="../assets/1732866477_e5f25bbc8ec662b2c2ea.png" alt="">
+                    <img src="../assets/1732866394_5487244033a8de69dcf9.png" alt="">
+                    <img src="../assets/1732866122_2eeb66155a49ffdcc0b1.png" alt="">
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="eniv-footer-description">
+                    Tokoden adalah platform terpercaya untuk top-up berbagai game favorit Anda. Dengan proses cepat,
+                    harga bersaing, dan layanan yang mudah digunakan, Tokoden menjadi solusi terbaik untuk kebutuhan
+                    top-up Anda. </div>
+                <p class="eniv-footer-copyright">Copyright © 2025 Tokoden - All Right Reserved</p>
+            </div>
+            <div class="col-lg-2 col-6">
+                <div class="eniv-footer-menu">
+                    <b>Menu Cepat</b>
+                    <a href="../../index.html">Beranda</a>
+                    <a href="../../orders.html">Cek Pesanan</a>
+                    <a href="../../price.html">Daftar Harga</a>
+                    <a href="../../review.html">Review</a>
+                    <a href="../../calculator.html">Kalkulator ML</a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-6">
+                <div class="eniv-footer-menu">
+                    <b>Tentang</b>
+                    <a href="../../help.html">Hubungi Kami</a>
+                    <a href="../../terms.html">Syarat dan Ketentuan</a>
+                    <a href="../../privacy.html">Kebijakan Privasi</a>
+                    <a href="../../faq.html">Pertanyaan Umum</a>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="eniv-footer-menu">
+                    <b>Bantuan</b>
+                </div>
+            </div>
+        </div>
+        <div class="eniv-footer-copyright-mobile">
+            Copyright © 2025 Tokoden - All Right Reserved
+        </div>
+    </div>
+</div>
 
-        <script type="text/javascript" async="" charset="utf-8" src="../assets/recaptcha__en.js.download" crossorigin="anonymous" integrity="sha384-P3vOnwOQjXmCJwx1vTvZAroj9OVXiVWsH201GY3AuWFi+LVyRVQwt0M/4hdSxMBf"></script><script src="../assets/jquery-3.6.0.min.js.download"></script>
-        <script src="../assets/jquery-ui.js.download"></script>
-        <script src="../assets/bootstrap.bundle.min.js.download"></script>
-        <script src="../assets/owl.carousel.min.js.download"></script>
-        <script src="../assets/gsap.min.js.download"></script>
-        <script src="../assets/sweetalert2@11"></script>
-        <script src="../assets/jquery.dataTables.min.js.download"></script>
-        <script src="../assets/ckeditor.js.download"></script>
-        <script src="../assets/api.js.download"></script>
+<script type="text/javascript" async="" charset="utf-8" src="../assets/recaptcha__en.js.download"
+    crossorigin="anonymous"
+    integrity="sha384-P3vOnwOQjXmCJwx1vTvZAroj9OVXiVWsH201GY3AuWFi+LVyRVQwt0M/4hdSxMBf"></script>
+<script src="../assets/jquery-3.6.0.min.js.download"></script>
+<script src="../assets/jquery-ui.js.download"></script>
+<script src="../assets/bootstrap.bundle.min.js.download"></script>
+<script src="../assets/owl.carousel.min.js.download"></script>
+<script src="../assets/gsap.min.js.download"></script>
+<script src="../assets/sweetalert2@11"></script>
+<script src="../assets/jquery.dataTables.min.js.download"></script>
+<script src="../assets/ckeditor.js.download"></script>
+<script src="../assets/api.js.download"></script>
 
-        
-        <script>
-            function logout() {
-                Swal.fire({
-                    title: "Anda yakin?",
-                    text: "Anda akan logout dari akun",
-                    icon: "info",
-                    showCancelButton: true,
-                    confirmButtonText: "Tetap Logout",
-                    cancelButtonText: "Batal"
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        window.location.href = './logout'
-                    }
-                });
+
+<script>
+    function logout() {
+        Swal.fire({
+            title: "Anda yakin?",
+            text: "Anda akan logout dari akun",
+            icon: "info",
+            showCancelButton: true,
+            confirmButtonText: "Tetap Logout",
+            cancelButtonText: "Batal"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = './logout'
             }
-        </script>
-                <script src="../assets/codemirror.min.js.download"></script>
-        <script src="../assets/htmlmixed.min.js.download"></script>
-        <script>
-            function random_string(length) {
-                const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-                let result = '';
-                for (let i = 0; i < length; i++) {
-                    result += characters.charAt(Math.floor(Math.random() * characters.length));
-                }
-                return result;
+        });
+    }
+</script>
+<script src="../assets/codemirror.min.js.download"></script>
+<script src="../assets/htmlmixed.min.js.download"></script>
+<script>
+    function random_string(length) {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let result = '';
+        for (let i = 0; i < length; i++) {
+            result += characters.charAt(Math.floor(Math.random() * characters.length));
+        }
+        return result;
+    }
+    function hapus(link) {
+
+        Swal.fire({
+            title: "Anda yakin?",
+            text: "Data akan dihapus secara permanen",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Tetap Hapus",
+            cancelButtonText: "Batal",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = link;
             }
-            function hapus(link) {
+        });
+    }
 
-                Swal.fire({
-                    title: "Anda yakin?",
-                    text: "Data akan dihapus secara permanen",
-                    icon: "warning",
-                    showCancelButton: true,
-                    confirmButtonText: "Tetap Hapus",
-                    cancelButtonText: "Batal",
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        window.location.href = link;
-                    }
-                });
-            }
+    function menu_admin_hide() {
 
-            function menu_admin_hide() {
+        var div = $(".eniv-admin-menu");
+        gsap.to(div, { duration: .2, opacity: 0 });
+        setTimeout(function () {
+            div.css('display', 'none')
+        }, 200);
+    }
 
-                var div = $(".eniv-admin-menu");
-                gsap.to(div, { duration: .2, opacity: 0 });
-                setTimeout(function() {
-                    div.css('display', 'none')
-                }, 200);
-            }
+    $(".eniv-navbar-admin-toggle").on('click', function () {
 
-            $(".eniv-navbar-admin-toggle").on('click', function() {
+        const currentPath = window.location.pathname;
 
-                const currentPath = window.location.pathname;
-                
-                if (!currentPath.includes('/admin')) {
-                    window.location.href = '/admin';
-                } else {
+        if (!currentPath.includes('/admin')) {
+            window.location.href = '/admin';
+        } else {
 
-                    menu_user_hide();
-                    
-                    if ($(".eniv-admin-menu").css('display') == 'none') {
-                        var div = $(".eniv-admin-menu").css('display', 'flex');
-                        gsap.to(div, { duration: .2, opacity: 1 });
-                    } else {
-                        menu_admin_hide();
-                    }
-                }
-            });
-        </script>
-        <script>
-            var base_url = '.';
-            function salin(text, message) {                 
-                navigator.clipboard.writeText(text); 
-                Swal.fire('Berhasil', message, 'success');
-            }
+            menu_user_hide();
 
-            function filterList(keyword) {                
-                keyword = keyword.toLowerCase();                
-                $('.eniv-pricelist-games li').each(function() {                    
-                    const itemText = $(this).find('span').text().toLowerCase();                    
-                    if (itemText.includes(keyword)) {
-                        $(this).show();
-                    } else {
-                        $(this).hide();
-                    }
-                });
-            }
-
-            function menu_user_hide() {
-                var div = $(".eniv-navbar-center-menu-mobile");
-                gsap.to(div, { duration: .2, opacity: 0 });
-                setTimeout(function() {
-                    div.css('display', 'none')
-                }, 200);
-            }
-
-            $(".eniv-navbar-start-toggle").on('click', function() {
+            if ($(".eniv-admin-menu").css('display') == 'none') {
+                var div = $(".eniv-admin-menu").css('display', 'flex');
+                gsap.to(div, { duration: .2, opacity: 1 });
+            } else {
                 menu_admin_hide();
-                if ($(".eniv-navbar-center-menu-mobile").css('display') == 'none') {
-                    var div = $(".eniv-navbar-center-menu-mobile").css('display', 'block');
-                    gsap.to(div, { duration: .2, opacity: 1 });
-                } else {
-                    menu_user_hide();
-                }
-            });
-        </script>
+            }
+        }
+    });
+</script>
+<script>
+    var base_url = '.';
+    function salin(text, message) {
+        navigator.clipboard.writeText(text);
+        Swal.fire('Berhasil', message, 'success');
+    }
 
-        <!-- <script>
+    function filterList(keyword) {
+        keyword = keyword.toLowerCase();
+        $('.eniv-pricelist-games li').each(function () {
+            const itemText = $(this).find('span').text().toLowerCase();
+            if (itemText.includes(keyword)) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    }
+
+    function menu_user_hide() {
+        var div = $(".eniv-navbar-center-menu-mobile");
+        gsap.to(div, { duration: .2, opacity: 0 });
+        setTimeout(function () {
+            div.css('display', 'none')
+        }, 200);
+    }
+
+    $(".eniv-navbar-start-toggle").on('click', function () {
+        menu_admin_hide();
+        if ($(".eniv-navbar-center-menu-mobile").css('display') == 'none') {
+            var div = $(".eniv-navbar-center-menu-mobile").css('display', 'block');
+            gsap.to(div, { duration: .2, opacity: 1 });
+        } else {
+            menu_user_hide();
+        }
+    });
+</script>
+
+<!-- <script>
             $("#datatable").DataTable({
                 pageLength: 25,
                 ordering: false,
             });
-        </script> -->                    
+        </script> -->
 </body>
+
 </html>

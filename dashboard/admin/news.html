@@ -2,26 +2,25 @@
 <html lang="en">
 
 <head>
-
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kelola Level - Tokoden</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <title>Kelola Berita - Tokoden</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap">
+
+    <link rel="shortcut icon" href="../../../assets/images/1738000059_80ba666e578a141036ef.png" type="image/x-icon">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css2">
-
-    <link rel="shortcut icon" href="../../assets/images/1738000059_80ba666e578a141036ef.png" type="image/x-icon">
-
-    <link rel="stylesheet" href="../assets/all.min.css">
-    <link rel="stylesheet" href="../assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="../assets/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="../assets/style.css">
-    <link rel="stylesheet" href="../assets/enivay.css">
-    <link rel="stylesheet" href="../assets/codemirror.min.css">
-    <link rel="stylesheet" href="../assets/dracula.min.css">
-    <link rel="stylesheet" href="../assets/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/enivay.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/theme/dracula.min.css">
+    <link rel="stylesheet" href="../../../assets/css/admin.css">
 
     <style>
         @media (min-width: 1400px) {
@@ -543,72 +542,47 @@
                     </div>
                     <div class="eniv-admin-content">
                         <div class="eniv-page eniv-page-tools">
-                            <h1>Kelola Level</h1>
+                            <h1>Kelola Berita</h1>
+                            <a href="#/admin/news/add" class="btn btn-primary">Tambah Berita</a>
                         </div>
                         <div class="card">
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <div id="datatable_wrapper" class="dataTables_wrapper no-footer">
-                                        <div class="dataTables_length" id="datatable_length"><label>Show <select
-                                                    name="datatable_length" aria-controls="datatable" class="">
-                                                    <option value="10">10</option>
-                                                    <option value="25">25</option>
-                                                    <option value="50">50</option>
-                                                    <option value="100">100</option>
-                                                </select> entries</label></div>
-                                        <div id="datatable_filter" class="dataTables_filter"><label>Search:<input
-                                                    type="search" class="" placeholder=""
-                                                    aria-controls="datatable"></label></div>
-                                        <table class="table dataTable no-footer" id="datatable"
-                                            aria-describedby="datatable_info">
-                                            <thead>
-                                                <tr>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1"
-                                                        style="width: 75.875px;">No</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1"
-                                                        style="width: 161.625px;">Level</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1"
-                                                        style="width: 165.797px;">Gambar</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1"
-                                                        style="width: 279.484px;">Harga Upgrade</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1"
-                                                        style="width: 142.641px;">Urutan</th>
-                                                    <th class="sorting_disabled" rowspan="1" colspan="1"
-                                                        style="width: 52.5781px;">Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="odd">
-                                                    <td>1</td>
-                                                    <td>Gold</td>
-                                                    <td>
-                                                        <img src="../assets/1733412072_60555fcd48f57b97ccc1.png" alt=""
-                                                            height="26">
-                                                    </td>
-                                                    <td>Rp 250.000</td>
-                                                    <td>3</td>
-                                                    <td width="10" nowrap="">
-                                                        <a href="./level/edit.html"
-                                                            class="btn btn-primary btn-sm">Edit</a>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <div class="dataTables_info" id="datatable_info" role="status"
-                                            aria-live="polite">Showing 1 to 3 of 3 entries</div>
-                                        <div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate">
-                                            <a class="paginate_button previous disabled" aria-controls="datatable"
-                                                data-dt-idx="0" tabindex="-1" id="datatable_previous">Previous</a>
-                                            <span><a class="paginate_button current" aria-controls="datatable"
-                                                    data-dt-idx="1" tabindex="0">1</a></span>
-                                            <a class="paginate_button next disabled" aria-controls="datatable"
-                                                data-dt-idx="2" tabindex="-1" id="datatable_next">Next</a>
-                                        </div>
-                                    </div>
+                                    <table class="table" id="datatable">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Judul</th>
+                                                <th>Status</th>
+                                                <th>Reaction</th>
+                                                <th>Tanggal</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Welcome</td>
+                                                <td>Publish</td>
+                                                <td>
+                                                    <div class="mb-1">
+                                                        <i class="fa fa-thumbs-up me-1"></i> : 1
+                                                    </div>
+                                                    <i class="fa fa-thumbs-down me-1"></i> : 0
+                                                </td>
+                                                <td>2024-12-02 08:10:02</td>
+                                                <td width="10" nowrap>
+                                                    <a href="#/admin/news/edit/1"
+                                                        class="btn btn-primary btn-sm">Edit</a>
+                                                    <button onclick="hapus('#/admin/news/delete/1');"
+                                                        class="btn btn-danger btn-sm">Hapus</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -618,14 +592,14 @@
         <div class="container">
             <div class="row mb-4">
                 <div class="col-lg-6">
-                    <img src="../assets/1738000049_1b486829364bfa9d672a.png" alt="" height="40">
+                    <img src="../../../assets/images/1738000049_1b486829364bfa9d672a.png" alt="" height="40">
                 </div>
                 <div class="col-lg-6">
                     <div class="eniv-footer-method">
-                        <img src="../assets/1738000654_e2a9395885e052c79a15.png" alt="">
-                        <img src="../assets/1732866477_e5f25bbc8ec662b2c2ea.png" alt="">
-                        <img src="../assets/1732866394_5487244033a8de69dcf9.png" alt="">
-                        <img src="../assets/1732866122_2eeb66155a49ffdcc0b1.png" alt="">
+                        <img src="../../../assets/images/method/1738000654_e2a9395885e052c79a15.png" alt="">
+                        <img src="../../../assets/images/method/1732866477_e5f25bbc8ec662b2c2ea.png" alt="">
+                        <img src="../../../assets/images/method/1732866394_5487244033a8de69dcf9.png" alt="">
+                        <img src="../../../assets/images/method/1732866122_2eeb66155a49ffdcc0b1.png" alt="">
                     </div>
                 </div>
             </div>
@@ -635,25 +609,25 @@
                         Tokoden adalah platform terpercaya untuk top-up berbagai game favorit Anda. Dengan proses cepat,
                         harga bersaing, dan layanan yang mudah digunakan, Tokoden menjadi solusi terbaik untuk kebutuhan
                         top-up Anda. </div>
-                    <p class="eniv-footer-copyright">Copyright © 2025 Tokoden - All Right Reserved</p>
+                    <p class="eniv-footer-copyright">Copyright &copy; 2025 Tokoden - All Right Reserved</p>
                 </div>
                 <div class="col-lg-2 col-6">
                     <div class="eniv-footer-menu">
                         <b>Menu Cepat</b>
-                        <a href="../../index.html">Beranda</a>
-                        <a href="../../orders.html">Cek Pesanan</a>
-                        <a href="../../price.html">Daftar Harga</a>
-                        <a href="../../review.html">Review</a>
-                        <a href="../../calculator.html">Kalkulator ML</a>
+                        <a href="../../../index.html">Beranda</a>
+                        <a href="../../../orders.html">Cek Pesanan</a>
+                        <a href="../../../price.html">Daftar Harga</a>
+                        <a href="../../../review.html">Review</a>
+                        <a href="../../../calculator.html">Kalkulator ML</a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-6">
                     <div class="eniv-footer-menu">
                         <b>Tentang</b>
-                        <a href="../../help.html">Hubungi Kami</a>
-                        <a href="../../terms.html">Syarat dan Ketentuan</a>
-                        <a href="../../privacy.html">Kebijakan Privasi</a>
-                        <a href="../../faq.html">Pertanyaan Umum</a>
+                        <a href="../../../help.html">Hubungi Kami</a>
+                        <a href="../../../terms.html">Syarat dan Ketentuan</a>
+                        <a href="../../../privacy.html">Kebijakan Privasi</a>
+                        <a href="../../../faq.html">Pertanyaan Umum</a>
                     </div>
                 </div>
                 <div class="col-lg-2">
@@ -663,23 +637,20 @@
                 </div>
             </div>
             <div class="eniv-footer-copyright-mobile">
-                Copyright © 2025 Tokoden - All Right Reserved
+                Copyright &copy; 2025 Tokoden - All Right Reserved
             </div>
         </div>
     </div>
 
-    <script type="text/javascript" async="" charset="utf-8" src="../assets/recaptcha__en.js.download"
-        crossorigin="anonymous"
-        integrity="sha384-P3vOnwOQjXmCJwx1vTvZAroj9OVXiVWsH201GY3AuWFi+LVyRVQwt0M/4hdSxMBf"></script>
-    <script src="../assets/jquery-3.6.0.min.js.download"></script>
-    <script src="../assets/jquery-ui.js.download"></script>
-    <script src="../assets/bootstrap.bundle.min.js.download"></script>
-    <script src="../assets/owl.carousel.min.js.download"></script>
-    <script src="../assets/gsap.min.js.download"></script>
-    <script src="../assets/sweetalert2@11"></script>
-    <script src="../assets/jquery.dataTables.min.js.download"></script>
-    <script src="../assets/ckeditor.js.download"></script>
-    <script src="../assets/api.js.download"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 
 
     <script>
@@ -693,13 +664,13 @@
                 cancelButtonText: "Batal"
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = './logout'
+                    window.location.href = '#/logout'
                 }
             });
         }
     </script>
-    <script src="../assets/codemirror.min.js.download"></script>
-    <script src="../assets/htmlmixed.min.js.download"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/mode/htmlmixed/htmlmixed.min.js"></script>
     <script>
         function random_string(length) {
             const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -753,17 +724,28 @@
             }
         });
     </script>
+
+
+
     <script>
-        var base_url = '.';
+
+        var base_url = '#';
+
         function salin(text, message) {
+
             navigator.clipboard.writeText(text);
+
             Swal.fire('Berhasil', message, 'success');
         }
 
         function filterList(keyword) {
+
             keyword = keyword.toLowerCase();
+
             $('.eniv-pricelist-games li').each(function () {
+
                 const itemText = $(this).find('span').text().toLowerCase();
+
                 if (itemText.includes(keyword)) {
                     $(this).show();
                 } else {
@@ -773,6 +755,7 @@
         }
 
         function menu_user_hide() {
+
             var div = $(".eniv-navbar-center-menu-mobile");
             gsap.to(div, { duration: .2, opacity: 0 });
             setTimeout(function () {
@@ -781,7 +764,9 @@
         }
 
         $(".eniv-navbar-start-toggle").on('click', function () {
+
             menu_admin_hide();
+
             if ($(".eniv-navbar-center-menu-mobile").css('display') == 'none') {
                 var div = $(".eniv-navbar-center-menu-mobile").css('display', 'block');
                 gsap.to(div, { duration: .2, opacity: 1 });
@@ -791,12 +776,13 @@
         });
     </script>
 
-    <!-- <script>
-            $("#datatable").DataTable({
-                pageLength: 25,
-                ordering: false,
-            });
-        </script> -->
+    <script>
+        $("#datatable").DataTable({
+            pageLength: 25,
+            ordering: false,
+        });
+    </script>
+
 </body>
 
 </html>

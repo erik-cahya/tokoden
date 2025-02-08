@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Notifikasi Email - Tokoden</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap">
+
+    <link rel="shortcut icon" href="../../../assets/images/1738000059_80ba666e578a141036ef.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/enivay.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/theme/dracula.min.css">
+    <link rel="stylesheet" href="../../../assets/css/admin.css">
+
+    <style>
+        @media (min-width: 1400px) {
+
+            .container,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl,
+            .container-xxl {
+                max-width: 1080px;
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 991px) {
+
+            .container,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl,
+            .container-xxl {
+                padding: 0 14px;
+            }
+
+            .table-responsive {
+                overflow-x: auto;
+            }
+
+            .eniv-variasi-blur {
+                transform: none;
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .eniv-navbar-top-start {
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            .eniv-banner {
+                margin-bottom: 20px;
+            }
+
+            .eniv-games-popular a h1 {
+                font-size: 14px;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                margin-bottom: 4px;
+            }
+
+            .eniv-games-popular a h2 {
+                font-size: 14px;
+                background: var(--primary);
+                top: 0;
+                right: 0;
+                padding: 2px 2px 4px 4px;
+                border-radius: 0 0 0 12px;
+            }
+
+            .eniv-games-popular a img {
+                height: 52px;
+            }
+
+            .eniv-games-popular {
+                margin-bottom: 10px;
+                max-height: none;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .eniv-games-popular a {
+                gap: 10px;
+                margin-bottom: 0;
+                width: calc(50% - 5px);
+            }
+
+            .eniv-category::-webkit-scrollbar {
+                width: 0;
+            }
+
+            .eniv-navbar-end-profile span {
+                display: none;
+            }
+
+            .eniv-navbar-center .eniv-navbar-center-brand {
+                display: grid;
+            }
+
+            .eniv-navbar-center .eniv-navbar-center-menu {
+                display: none;
+            }
+
+            .d-none-mobile {
+                display: none !important;
+            }
+
+            .eniv-navbar-start .eniv-navbar-start-brand {
+                display: none;
+            }
+
+            .eniv-navbar-start .eniv-navbar-start-toggle {
+                display: block;
+            }
+
+            .eniv-games {
+                gap: 10px;
+                justify-content: flex-start;
+            }
+
+            .eniv-games a {
+                padding: 12px;
+                width: calc(33% - 6px);
+            }
+
+            .eniv-games a h1 {
+                font-size: 13px;
+                line-height: 18px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            .eniv-games a span {
+                font-size: 12px;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            .eniv-page p {
+                font-size: 14px;
+                line-height: 24px;
+            }
+
+            .eniv-flash-sale-head {
+                gap: 10px;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+
+            .eniv-content {
+                padding: 30px 0;
+            }
+
+            .eniv-footer-method {
+                display: none;
+            }
+
+            .eniv-footer-menu {
+                margin-bottom: 30px;
+            }
+
+            .eniv-footer-copyright {
+                display: none;
+            }
+
+            .eniv-footer-copyright-mobile {
+                display: block;
+            }
+
+            .eniv-space .eniv-games-list:last-child {
+                margin-bottom: 0;
+            }
+
+            .d-none-pc {
+                display: block;
+            }
+
+            .eniv-games-banner-content {
+                padding: 20px;
+                align-items: flex-start;
+            }
+
+            .eniv-games-banner-content h1 {
+                font-size: 16px;
+            }
+
+            .eniv-games-logo {
+                height: 84px;
+            }
+
+            .eniv-games-banner-content ul li {
+                white-space: nowrap;
+            }
+
+            .eniv-games-banner-content ul {
+                gap: 14px;
+                flex-wrap: wrap;
+            }
+
+            .eniv-games-banner-content span {
+                margin-bottom: 16px;
+            }
+
+            .eniv-card-games {
+                gap: 12px;
+            }
+
+            .eniv-card-games-left {
+                width: 46px;
+            }
+
+            .eniv-card-games-left span {
+                height: 46px;
+                position: relative;
+                margin-top: -20px;
+            }
+
+            .eniv-card-games-title {
+                font-size: 16px;
+                height: 46px;
+            }
+
+            .eniv-card-games-right {
+                width: calc(100% - 58px);
+            }
+
+            .eniv-card-games-right .card {
+                margin-left: -58px;
+                width: calc(100% + 58px);
+            }
+
+            .eniv-card-games-right .eniv-category,
+            .eniv-card-games-right .eniv-product-list {
+                margin-left: -58px;
+                width: calc(100% + 58px);
+            }
+
+            .eniv-card-games-right .eniv-method-main {
+                margin-left: -58px;
+                width: calc(100% + 58px);
+            }
+
+            .eniv-card-games-right .eniv-card-games-title {
+                margin-bottom: 22px;
+            }
+
+            .eniv-card-games-right .accordion {
+                margin-left: -58px;
+                width: calc(100% + 58px);
+            }
+
+            .eniv-card-games-right .btn#btn-confirm {
+                margin-left: -58px;
+                width: calc(100% + 58px) !important;
+            }
+
+            .eniv-product-list {
+                gap: 12px;
+            }
+
+            .eniv-product {
+                padding: 8px;
+                width: calc(50% - 6px);
+            }
+
+            .eniv-product p {
+                line-height: 20px;
+            }
+
+            .eniv-product img {
+                height: 40px;
+            }
+
+            .accordion-body .eniv-method {
+                padding: 12px 14px;
+                flex-direction: column-reverse;
+                gap: 16px;
+                align-items: flex-start;
+            }
+
+            #accordionMethod .accordion-body .row .col-6:nth-child(odd) {
+                padding-right: 7px;
+            }
+
+            #accordionMethod .accordion-body .row .col-6:nth-child(even) {
+                padding-left: 7px;
+            }
+
+            .eniv-auth {
+                padding: 20px 0;
+                flex-direction: column;
+            }
+
+            .eniv-auth-end {
+                width: 100%;
+            }
+
+            .eniv-auth-start {
+                width: 100%;
+            }
+
+            .eniv-auth-end,
+            .eniv-banner-auth .item {
+                height: 468px;
+            }
+
+            .eniv-faq-body {
+                margin-bottom: 60px;
+            }
+
+            .eniv-faq-item-header {
+                padding: 16px 0;
+            }
+
+            .eniv-card-users {
+                margin-bottom: 40px;
+            }
+
+            .eniv-admin-menu {
+                display: none;
+                opacity: 0;
+                flex-direction: column;
+                gap: 12px;
+                position: absolute;
+                top: 21px;
+                z-index: 10000;
+                left: 0;
+                right: 0;
+            }
+
+            .eniv-navbar-admin-toggle {
+                display: block;
+            }
+
+            div.eniv-admin-item:hover ul {
+                padding-top: 6px;
+                width: calc(100% - 50px);
+            }
+
+            .eniv-games-target-right {
+                position: absolute;
+                top: -70px;
+                right: 0;
+            }
+
+            .eniv-navbar-center-menu-mobile {}
+        }
+
+        @media (max-width: 767px) {
+            .eniv-orders-games {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .eniv-orders-games-card {
+                width: 100%;
+            }
+        }
+    </style>
+
+<body>
+    <div class="eniv-screenoff"></div>
+    <div class="eniv-variasi-blur"></div>
+    <div class="eniv-navbar-top">
+        <div class="container">
+            <div class="eniv-navbar-top-content">
+                <div class="eniv-navbar-top-start"></div>
+                <div class="eniv-navbar-top-end"></div>
+            </div>
+        </div>
+    </div>
+    <div class="eniv-navbar">
+        <div class="container">
+            <div class="eniv-navbar-content">
+                <div class="eniv-navbar-start">
+                    <a href="../../../index.html" class="eniv-navbar-start-brand">
+                        <img src="../../assets/1738000049_1b486829364bfa9d672a.png" alt="">
+                    </a>
+                    <div class="eniv-navbar-start-toggle">
+                        <img src="../../assets/menu.svg" alt="">
+                    </div>
+                    <div class="eniv-navbar-admin-toggle">
+                        <img src="../../assets/menu-admin.png" alt="">
+                    </div>
+                </div>
+                <div class="eniv-navbar-center">
+                    <div class="eniv-navbar-center-brand">
+                        <a href="../../../index.html">
+                            <img src="../../assets/1738000049_1b486829364bfa9d672a.png" alt="">
+                        </a>
+                    </div>
+                    <div class="eniv-navbar-center-menu">
+                        <a href="../../../index.html" class="">Beranda</a>
+                        <a href="../../../orders.html" class="">Cek Pesanan</a>
+                        <a href="../../../price.html" class="">Daftar Harga</a>
+                    </div>
+                </div>
+                <div class="eniv-navbar-end">
+                    <a href="../../admin.html" class="eniv-navbar-end-btn py-2 px-3 bg-primary me-3 d-none-mobile">
+                        <i class="fa fa-cog m-0"></i>
+                    </a>
+                    <a href="../../users.html" class="eniv-navbar-end-profile">
+                        <span>Akun Saya</span>
+                        <img src="../../assets/1738004619_b0319761872079498123.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="eniv-navbar-center-menu-mobile">
+                <a href="../../../index.html" class="">
+                    <img src="../../assets/home.png" alt="">
+                    Beranda
+                </a>
+                <a href="../../../orders.html" class="">
+                    <img src="../../assets/orders.png" alt="">
+                    Cek Pesanan
+                </a>
+                <a href="../../../price.html" class="">
+                    <img src="../../assets/price.png" alt="">
+                    Daftar Harga
+                </a>
+                <a href="../../../review.html" class="">
+                    <img src="../../assets/review.png" alt="">
+                    Review
+                </a>
+                <a href="../../../calculator.html" class="">
+                    <img src="../../assets/calculator.png" alt="">
+                    Kalkulator ML
+                </a>
+                <a href="../../../help.html" class="">
+                    <img src="../../assets/help.png" alt="">
+                    Hubungi Kami
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="eniv-body">
+        <div class="container">
+            <div class="eniv-content">
+                <div class="eniv-admin">
+                    <div class="eniv-admin-menu">
+                        <a href="../admin.html" class="eniv-admin-item"><span><i class="fa fa-home"></i></span></a>
+                        <a href="../config.html" class="eniv-admin-item"><span>Konfigurasi</span></a>
+                        <div class="eniv-admin-item">
+                            <span>Akun</span>
+                            <ul>
+                                <li><a href="../users.html" class="">Kelola Akun</a></li>
+                                <li><a href="../level.html" class="">Kelola Level</a></li>
+                                <li><a href="../balance.html" class="">Riwayat Saldo</a></li>
+                            </ul>
+                        </div>
+                        <div class="eniv-admin-item">
+                            <span>Pembelian</span>
+                            <ul>
+                                <li><a href="../orders/data.html" class="">Data Pembelian</a></li>
+                                <li><a href="../orders/grid.html" class="">Grid Pembelian</a></li>
+                                <li><a href="../orders/review.html" class="">Review Pembelian</a></li>
+                                <li><a href="../orders/report.html" class="">Laporan Pembelian</a></li>
+                            </ul>
+                        </div>
+                        <a href="../topup.html" class="eniv-admin-item"><span>Isi Saldo</span></a>
+                        <div class="eniv-admin-item">
+                            <span>Games</span>
+                            <ul>
+                                <li><a href="../games/data.html" class="">Kelola Games</a></li>
+                                <li><a href="../games/category.html" class="">Kelola Kategori</a></li>
+                                <li><a href="../games/tag.html" class="">Kelola Tag</a></li>
+                                <li><a href="../games/target.html" class="">Sistem Target</a></li>
+                            </ul>
+                        </div>
+                        <div class="eniv-admin-item">
+                            <span>Produk</span>
+                            <ul>
+                                <li><a href="../product/data.html" class="">Kelola Produk</a></li>
+                                <li><a href="../product/flash.html" class="">Flash Sale</a></li>
+                                <li><a href="../product/category.html" class="">Kelola Kategori</a></li>
+                                <li><a href="../product/icon.html" class="">Kelola Icon</a></li>
+                                <li><a href="../product/markup.html" class="">Markup Harga</a></li>
+                                <li><a href="../product/get.html" class="">Get Produk</a></li>
+                                <li><a href="../product/config.html" class="">Konfigurasi</a></li>
+                            </ul>
+                        </div>
+                        <div class="eniv-admin-item">
+                            <span>Metode</span>
+                            <ul>
+                                <li><a href="../method/data.html" class="">Kelola Metode</a></li>
+                                <li><a href="../method/category.html" class="">Kelola Kategori</a></li>
+                            </ul>
+                        </div>
+                        <a href="../voucher.html" class="eniv-admin-item"><span>Voucher</span></a>
+                        <a href="../banner.html" class="eniv-admin-item"><span>Banner</span></a>
+                        <a href="../news.html" class="eniv-admin-item"><span>Berita</span></a>
+                        <div class="eniv-admin-item">
+                            <span>Notifikasi</span>
+                            <ul>
+                                <li><a href="../notif/whatsapp.html" class="">Notif Whatsapp</a></li>
+                                <li><a href="../notif/email.html" class="">Notif Email</a></li>
+                                <li><a href="../notif/whatsapp/response.html" class="">Response Whatsapp</a></li>
+                                <li><a href="../notif/email/response.html" class="">Response Email</a></li>
+                            </ul>
+                        </div>
+                        <div class="eniv-admin-item">
+                            <span>Lainnya</span>
+                            <ul>
+                                <li><a href="../popup.html" class="">Kelola Popup</a></li>
+                                <li><a href="../otp.html" class="">Kelola OTP</a></li>
+                                <li><a href="../sosmed.html" class="">Kelola Sosmed</a></li>
+                                <li><a href="../preference.html" class="">Kelola Tampilan</a></li>
+                                <li>
+                                    <a href="../pages/help.html" class="">
+                                        Hubungi Kami
+                                    </a>
+                                </li>
+                                <li><a href="../faq/data.html" class="">Pertanyaan Umum</a></li>
+                                <li><a href="../pages/terms.html" class="">Syarat dan Ketentuan</a></li>
+                                <li><a href="../pages/privacy.html" class="">Kebijakan Privasi</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="eniv-admin-content">
+                        <div class="eniv-page eniv-page-tools">
+                            <h1>Notifikasi Email</h1>
+                            <!-- <a href="/admin/notif/email/add" class="btn btn-primary">Tambah Notifikasi</a> -->
+                            <a href="/admin/notif/email/template" class="btn btn-primary">Edit
+                                Template</a>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table" id="datatable">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Judul</th>
+                                                <th>Subject</th>
+                                                <th>Konten</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>
+                                                    Upgrade Akun Berhasil <small class="mt-1 d-block">Email ini akan
+                                                        dikirimkan ke pengguna ketika berhasil melakukan upgrade akun
+
+                                                        Variabel yang tersedia
+                                                        #name# : Nama pengguna
+                                                        #wa# : No. Whatsapp pengguna
+                                                        #email# : Alamat Email pengguna
+                                                        #level_before# : Level sebelumnya
+                                                        #level_after# : Level tujuan upgrade</small>
+                                                </td>
+                                                <td>Berhasil Upgrade Akun</td>
+                                                <td>
+                                                    <p>Hallo #<strong>name#</strong>, selamat akun kamu telah berhasil
+                                                        diupdate menjadi akun</p>
+
+                                                    <p>Level : <strong>#level_after#</strong></p>
+
+                                                    <p>Nikmati transaksi lebih hemat dengan harga termurah</p>
+                                                </td>
+                                                <td>
+                                                    <span class="badge bg-success">On</span>
+                                                </td>
+                                                <td width="10" nowrap>
+                                                    <a href="/admin/notif/email/edit/11"
+                                                        class="btn btn-primary btn-sm">Edit</a>
+                                                    <button onclick="hapus('/admin/notif/email/delete/11');"
+                                                        class="btn btn-danger btn-sm">Hapus</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>
+                                                    Reset Password Berhasil <small class="mt-1 d-block">Email ini akan
+                                                        dikirimkan ke user ketika mereka berhasil melakukan reset
+                                                        password
+
+                                                        Variabel yang tersedia
+                                                        #name# : Nama pengguna
+                                                        #wa# : No. Whatsapp pengguna
+                                                        #email# : Alamat Email pengguna</small>
+                                                </td>
+                                                <td>Perubahan Password Akun Berhasil</td>
+                                                <td>
+                                                    <p>Halo #name#,</p>
+
+                                                    <p>Kami ingin menginformasikan bahwa proses reset password akun Anda
+                                                        telah berhasil. Silakan gunakan password baru Anda untuk login
+                                                        ke akun. Jika Anda tidak melakukan permintaan reset password
+                                                        ini, segera hubungi tim kami untuk mendapatkan bantuan.</p>
+                                                </td>
+                                                <td>
+                                                    <span class="badge bg-success">On</span>
+                                                </td>
+                                                <td width="10" nowrap>
+                                                    <a href="/admin/notif/email/edit/10"
+                                                        class="btn btn-primary btn-sm">Edit</a>
+                                                    <button onclick="hapus('/admin/notif/email/delete/10');"
+                                                        class="btn btn-danger btn-sm">Hapus</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>
+                                                    OTP Reset Password <small class="mt-1 d-block">Email ini akan
+                                                        dikirimkan ketika user melakukan request OTP untuk reset
+                                                        password
+
+                                                        Variabel yang tersedia
+                                                        #name# : Nama Pengguna
+                                                        #wa# : No Whatsapp Pengguna
+                                                        #email# : Email Pengguna
+                                                        #otp# : Kode OTP Reset Password</small>
+                                                </td>
+                                                <td>Kode OTP Reset Password Kamu</td>
+                                                <td>
+                                                    <p>Halo #name#,</p>
+
+                                                    <p>Kami menerima permintaan untuk mengatur ulang password akun Anda.
+                                                        Gunakan kode OTP berikut untuk melanjutkan proses reset password
+                                                        :</p>
+
+                                                    <p><strong>#otp#</strong></p>
+
+                                                    <p>Kode ini berlaku selama <strong>15 menit</strong>. Jika Anda
+                                                        tidak merasa melakukan permintaan ini, harap abaikan email ini
+                                                        dan segera hubungi tim dukungan kami untuk keamanan akun Anda.
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <span class="badge bg-success">On</span>
+                                                </td>
+                                                <td width="10" nowrap>
+                                                    <a href="/admin/notif/email/edit/9"
+                                                        class="btn btn-primary btn-sm">Edit</a>
+                                                    <button onclick="hapus('/admin/notif/email/delete/9');"
+                                                        class="btn btn-danger btn-sm">Hapus</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>
+                                                    OTP Verifikasi Akun <small class="mt-1 d-block">Email ini dikirimkan
+                                                        ketika user melakukan request OTP untuk verifikasi akun
+
+                                                        Variabel yang tersedia
+                                                        #name# : Nama Pengguna
+                                                        #wa# : No Whatsapp Pengguna
+                                                        #email# : Email Pengguna
+                                                        #otp# : Kode OTP Verifikasi Akun</small>
+                                                </td>
+                                                <td>KOde OTP Verifikasi Akun Kamu</td>
+                                                <td>
+                                                    <p>Halo #name#,</p>
+
+                                                    <p>Terima kasih telah mendaftar di [Nama Website Anda]. Berikut
+                                                        adalah kode OTP&nbsp; Anda untuk verifikasi akun:</p>
+
+                                                    <p><strong>#otp#</strong></p>
+
+                                                    <p>Kode ini hanya berlaku selama <strong>15 menit</strong>. Harap
+                                                        segera gunakan kode ini untuk menyelesaikan proses verifikasi
+                                                        akun Anda.</p>
+
+                                                    <p>Jika Anda tidak merasa melakukan permintaan ini, abaikan email
+                                                        ini.</p>
+                                                </td>
+                                                <td>
+                                                    <span class="badge bg-success">On</span>
+                                                </td>
+                                                <td width="10" nowrap>
+                                                    <a href="/admin/notif/email/edit/8"
+                                                        class="btn btn-primary btn-sm">Edit</a>
+                                                    <button onclick="hapus('/admin/notif/email/delete/8');"
+                                                        class="btn btn-danger btn-sm">Hapus</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>
+                                                    Ucapan Pengguna Baru <small class="mt-1 d-block">Email ini
+                                                        dikirimkan ketika pengguna telah berhasil melakukan verifikasi
+                                                        akun
+
+                                                        Variabel yang tersedia
+                                                        #name# : Nama Pengguna
+                                                        #wa# : No Whatsapp Pengguna
+                                                        #email# : Email Pengguna</small>
+                                                </td>
+                                                <td>Hallo, Selamat datang</td>
+                                                <td>
+                                                    <p><strong>Hallo </strong>#name#<strong>,</strong></p>
+
+                                                    <p>Terima kasih telah bergabung dengan <strong>TopupZone</strong>,
+                                                        platform top-up game terpercaya dan cepat! Kami sangat senang
+                                                        menyambut Anda sebagai bagian dari komunitas kami.</p>
+
+                                                    <p>Dengan bergabung di sini, Anda mendapatkan akses ke:</p>
+
+                                                    <ul>
+                                                        <li><strong>Harga terbaik</strong> untuk berbagai game favorit
+                                                            Anda.</li>
+                                                        <li><strong>Proses top-up cepat</strong> hanya dalam hitungan
+                                                            detik.</li>
+                                                        <li><strong>Metode pembayaran lengkap</strong> untuk kenyamanan
+                                                            Anda.</li>
+                                                        <li><strong>Promo menarik</strong> dan penawaran eksklusif hanya
+                                                            untuk anggota kami!</li>
+                                                    </ul>
+
+                                                    <p>Ayo mulai perjalanan seru Anda bersama kami! Jika Anda
+                                                        membutuhkan bantuan, tim layanan pelanggan kami siap membantu
+                                                        kapan saja.</p>
+                                                </td>
+                                                <td>
+                                                    <span class="badge bg-success">On</span>
+                                                </td>
+                                                <td width="10" nowrap>
+                                                    <a href="/admin/notif/email/edit/7"
+                                                        class="btn btn-primary btn-sm">Edit</a>
+                                                    <button onclick="hapus('/admin/notif/email/delete/7');"
+                                                        class="btn btn-danger btn-sm">Hapus</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>
+                                                    Pendaftaran Pengguna <small class="mt-1 d-block">Email ini
+                                                        dikirimkan ketika user berhasil melakukan registrasi akun
+
+                                                        Variabel yang tersedia
+                                                        #name# : Nama Pengguna
+                                                        #wa# : No Whatsapp Pengguna
+                                                        #email# : Email Pengguna</small>
+                                                </td>
+                                                <td>Selamat! Akun Anda Berhasil Didaftarkan</td>
+                                                <td>
+                                                    <p>Halo #name#,</p>
+
+                                                    <p>Terima kasih telah mendaftar di <strong>TopupZone</strong>! Akun
+                                                        Anda telah berhasil dibuat, dan kini Anda dapat menikmati
+                                                        berbagai layanan kami, seperti top-up game dengan cepat, aman,
+                                                        dan terpercaya.</p>
+
+                                                    <p>Berikut adalah detail akun Anda:</p>
+
+                                                    <ul>
+                                                        <li><strong>Email:</strong> #email#</li>
+                                                    </ul>
+
+                                                    <p>Silakan login ke akun Anda menggunakan email ini dan kata sandi
+                                                        yang telah Anda buat saat pendaftaran. Jika Anda membutuhkan
+                                                        bantuan atau memiliki pertanyaan, tim kami siap membantu Anda
+                                                        kapan saja.</p>
+                                                </td>
+                                                <td>
+                                                    <span class="badge bg-success">On</span>
+                                                </td>
+                                                <td width="10" nowrap>
+                                                    <a href="/admin/notif/email/edit/6"
+                                                        class="btn btn-primary btn-sm">Edit</a>
+                                                    <button onclick="hapus('/admin/notif/email/delete/6');"
+                                                        class="btn btn-danger btn-sm">Hapus</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>
+                                                    Isi Saldo Berhasil <small class="mt-1 d-block">Email ini akan
+                                                        dikirimkan ketika request isi saldo user telah berhasil dibayar
+                                                        dan diproses
+
+                                                        Variabel yang tersedia
+                                                        #name# : Nama Pengguna
+                                                        #wa# : No Whatsapp Pengguna
+                                                        #email# : Email Pengguna
+                                                        #topup_id# : Order ID Pesanan Pengguna
+                                                        #method# : Metode Pembayaran
+                                                        #quantity# : Jumlah Isi Saldo
+                                                        #balance# : Saldo yang di dapat
+                                                        #total# : Total Pembayaran
+                                                        #status# : Status Pembelian</small>
+                                                </td>
+                                                <td>Yeyy... topup saldo telah berhasil</td>
+                                                <td>
+                                                    <p>Halo #name#,</p>
+
+                                                    <p>Terima kasih telah menggunakan layanan kami!</p>
+
+                                                    <p>Kami dengan senang hati memberitahukan bahwa isi saldo Anda telah
+                                                        berhasil diproses. Berikut adalah detail transaksi Anda:</p>
+
+                                                    <p><strong>Detail Transaksi:</strong></p>
+
+                                                    <ul>
+                                                        <li><strong>Nama Akun:</strong> #topup_id#</li>
+                                                        <li><strong>Jumlah Saldo:</strong> #quantity#</li>
+                                                        <li><strong>Metode Pembayaran:&nbsp;</strong>#method#</li>
+                                                    </ul>
+
+                                                    <p>Saldo telah langsung ditambahkan ke akun Anda dan siap digunakan
+                                                        untuk pembelian berbagai layanan atau produk di platform kami.
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <span class="badge bg-success">On</span>
+                                                </td>
+                                                <td width="10" nowrap>
+                                                    <a href="/admin/notif/email/edit/5"
+                                                        class="btn btn-primary btn-sm">Edit</a>
+                                                    <button onclick="hapus('/admin/notif/email/delete/5');"
+                                                        class="btn btn-danger btn-sm">Hapus</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>
+                                                    Isi Saldo Baru <small class="mt-1 d-block">Email ini dikirimkan
+                                                        ketika user melakukan request isi saldo
+
+                                                        Variabel yang tersedia
+                                                        #name# : Nama Pengguna
+                                                        #wa# : No Whatsapp Pengguna
+                                                        #email# : Email Pengguna
+                                                        #topup_id# : Order ID Pesanan Pengguna
+                                                        #method# : Metode Pembayaran
+                                                        #quantity# : Jumlah Isi Saldo
+                                                        #balance# : Saldo yang di dapat
+                                                        #total# : Total Pembayaran
+                                                        #status# : Status Pembelian</small>
+                                                </td>
+                                                <td>Saldo baru telah di tambahkan</td>
+                                                <td>
+                                                    <p>Halo #name#,</p>
+
+                                                    <p>Terima kasih telah menggunakan layanan kami!</p>
+
+                                                    <p>Kami ingin menginformasikan bahwa saldo baru telah berhasil
+                                                        ditambahkan ke akun Anda dengan rincian sebagai berikut:</p>
+
+                                                    <ul>
+                                                        <li><strong>Jumlah Saldo Ditambahkan:</strong> Rp&nbsp;</li>
+                                                        <li><strong>Saldo Total Saat Ini:</strong> Rp&nbsp;</li>
+                                                    </ul>
+
+                                                    <p>Jika Anda memiliki pertanyaan atau memerlukan bantuan lebih
+                                                        lanjut, jangan ragu untuk menghubungi tim dukungan pelanggan
+                                                        kami.</p>
+                                                </td>
+                                                <td>
+                                                    <span class="badge bg-success">On</span>
+                                                </td>
+                                                <td width="10" nowrap>
+                                                    <a href="/admin/notif/email/edit/4"
+                                                        class="btn btn-primary btn-sm">Edit</a>
+                                                    <button onclick="hapus('/admin/notif/email/delete/4');"
+                                                        class="btn btn-danger btn-sm">Hapus</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td>
+                                                    Pembelian Berhasil <small class="mt-1 d-block">Email ini akan
+                                                        dikirimkan ketika pembeliannya telah berhasil diproses
+
+                                                        Variabel yang tersedia
+                                                        #name# : Nama Pengguna
+                                                        #wa# : No Whatsapp Pengguna
+                                                        #email# : Email Pengguna
+                                                        #order_id# : Order ID Pesanan Pengguna
+                                                        #product# : Nama Produk yang di beli
+                                                        #games# : Nama Games yang di beli
+                                                        #method# : Metode Pembayaran
+                                                        #target# : Tujuan Pembelian
+                                                        #nickname# : Nickname Akun
+                                                        #total# : Total Pembayaran
+                                                        #status# : Status Pembelian
+                                                        #note# : Catatan Pembelian</small>
+                                                </td>
+                                                <td>Yeyy... pesanan berhasil</td>
+                                                <td>
+                                                    <p><strong>Halo </strong>#name#<strong>,</strong></p>
+
+                                                    <p>Terima kasih telah melakukan pembelian di
+                                                        <strong>TopupZone</strong>!<br />
+                                                        Berikut detail pesanan Anda:
+                                                    </p>
+
+                                                    <p><strong>ID Game/Produk:</strong> #order_id#<br />
+                                                        <strong>Game:</strong> #games#​​​​​​​<br />
+                                                        <strong>Produk:</strong> #product#<br />
+                                                        <strong>Jumlah:&nbsp;</strong>#Jumlah item#<br />
+                                                        <strong>Metode Pembayaran:</strong> #method#​​​​​​​<br />
+                                                        <strong>Total Pembayaran:</strong> #total#
+                                                    </p>
+
+                                                    <p>Pesanan Anda telah berhasil diproses, dan item telah dikirimkan
+                                                        ke akun Anda. Silakan cek akun game Anda untuk memastikan item
+                                                        telah diterima.</p>
+                                                </td>
+                                                <td>
+                                                    <span class="badge bg-success">On</span>
+                                                </td>
+                                                <td width="10" nowrap>
+                                                    <a href="/admin/notif/email/edit/3"
+                                                        class="btn btn-primary btn-sm">Edit</a>
+                                                    <button onclick="hapus('/admin/notif/email/delete/3');"
+                                                        class="btn btn-danger btn-sm">Hapus</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+                                                <td>
+                                                    Pembelian Dibayar <small class="mt-1 d-block">Email ini akan
+                                                        dikirimkan kepada user ketika pembeliannya berhasil dibayar
+
+                                                        Variabel yang tersedia
+                                                        #name# : Nama Pengguna
+                                                        #wa# : No Whatsapp Pengguna
+                                                        #email# : Email Pengguna
+                                                        #order_id# : Order ID Pesanan Pengguna
+                                                        #product# : Nama Produk yang di beli
+                                                        #games# : Nama Games yang di beli
+                                                        #method# : Metode Pembayaran
+                                                        #target# : Tujuan Pembelian
+                                                        #nickname# : Nickname Akun
+                                                        #total# : Total Pembayaran
+                                                        #status# : Status Pembelian
+                                                        #note# : Catatan Pembelian</small>
+                                                </td>
+                                                <td>Pembelianmu berhasil di bayar</td>
+                                                <td>
+                                                    <p>Terima kasih telah melakukan pembelian di
+                                                        <strong>TopupZone</strong>. Kami dengan senang hati
+                                                        menginformasikan bahwa pembayaran Kamu telah berhasil diproses.
+                                                        Berikut adalah detail pembelian Kamu :
+                                                    </p>
+
+                                                    <p><strong>Detail Pesanan:</strong></p>
+
+                                                    <ul>
+                                                        <li><strong>Nama Game:</strong> #games#</li>
+                                                        <li><strong>Item yang Dibeli:</strong> #product#</li>
+                                                        <li><strong>User ID &amp; Zone ID:</strong> #order_id#</li>
+                                                        <li><strong>Jumlah:</strong> #total#</li>
+                                                        <li><strong>Metode Pembayaran:</strong> #method#</li>
+                                                    </ul>
+
+                                                    <p><strong>Status Pesanan:</strong> Dibayar ✅</p>
+
+                                                    <p>Item akan segera diproses dan dikirimkan ke akun game Anda. Mohon
+                                                        tunggu beberapa saat.</p>
+                                                </td>
+                                                <td>
+                                                    <span class="badge bg-success">On</span>
+                                                </td>
+                                                <td width="10" nowrap>
+                                                    <a href="/admin/notif/email/edit/2"
+                                                        class="btn btn-primary btn-sm">Edit</a>
+                                                    <button onclick="hapus('/admin/notif/email/delete/2');"
+                                                        class="btn btn-danger btn-sm">Hapus</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>11</td>
+                                                <td>
+                                                    Pembelian Baru <small class="mt-1 d-block">Email ini akan dikirimkan
+                                                        kepada user ketika melakukan pembelian baru
+
+                                                        Variabel yang tersedia
+                                                        #name# : Nama Pengguna
+                                                        #wa# : No Whatsapp Pengguna
+                                                        #email# : Email Pengguna
+                                                        #order_id# : Order ID Pesanan Pengguna
+                                                        #product# : Nama Produk yang di beli
+                                                        #games# : Nama Games yang di beli
+                                                        #method# : Metode Pembayaran
+                                                        #target# : Tujuan Pembelian
+                                                        #nickname# : Nickname Akun
+                                                        #total# : Total Pembayaran
+                                                        #status# : Status Pembelian
+                                                        #note# : Catatan Pembelian</small>
+                                                </td>
+                                                <td>Selamat, pesananmu berhasil di buat</td>
+                                                <td>
+                                                    <p>Halo #name#,</p>
+
+                                                    <p>Terima kasih telah melakukan pembelian di TopupZone! Berikut
+                                                        adalah detail transaksi Anda:</p>
+
+                                                    <p><strong>Detail Pembelian:</strong></p>
+
+                                                    <ul>
+                                                        <li><strong>Nama Game:</strong> #games#</li>
+                                                        <li><strong>ID Akun:</strong> #order_id#</li>
+                                                        <li><strong>Paket yang Dibeli:</strong> #product#</li>
+                                                        <li><strong>Metode Pembayaran:</strong> #method#</li>
+                                                        <li><strong>Jumlah Pembayaran:</strong> #total#</li>
+                                                        <li><strong>Status:</strong> #status#</li>
+                                                    </ul>
+
+                                                    <p>Pesanan Anda akan diproses dalam waktu <strong>15 Menit</strong>.
+                                                        Jika pembelian belum masuk dalam 15 menit, silakan hubungi tim
+                                                        kami melalui [Kontak Support] dengan menyertakan bukti
+                                                        pembayaran dan ID Pesanan.</p>
+                                                </td>
+                                                <td>
+                                                    <span class="badge bg-success">On</span>
+                                                </td>
+                                                <td width="10" nowrap>
+                                                    <a href="/admin/notif/email/edit/1"
+                                                        class="btn btn-primary btn-sm">Edit</a>
+                                                    <button onclick="hapus('/admin/notif/email/delete/1');"
+                                                        class="btn btn-danger btn-sm">Hapus</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="eniv-footer">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-lg-6">
+                    <img src="../../../assets/images/1738000049_1b486829364bfa9d672a.png" alt="" height="40">
+                </div>
+                <div class="col-lg-6">
+                    <div class="eniv-footer-method">
+                        <img src="../../../assets/images/method/1738000654_e2a9395885e052c79a15.png" alt="">
+                        <img src="../../../assets/images/method/1732866477_e5f25bbc8ec662b2c2ea.png" alt="">
+                        <img src="../../../assets/images/method/1732866394_5487244033a8de69dcf9.png" alt="">
+                        <img src="../../../assets/images/method/1732866122_2eeb66155a49ffdcc0b1.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="eniv-footer-description">
+                        Tokoden adalah platform terpercaya untuk top-up berbagai game favorit Anda. Dengan proses cepat,
+                        harga bersaing, dan layanan yang mudah digunakan, Tokoden menjadi solusi terbaik untuk kebutuhan
+                        top-up Anda. </div>
+                    <p class="eniv-footer-copyright">Copyright &copy; 2025 Tokoden - All Right Reserved</p>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <div class="eniv-footer-menu">
+                        <b>Menu Cepat</b>
+                        <a href="../../../index.html">Beranda</a>
+                        <a href="../../../orders.html">Cek Pesanan</a>
+                        <a href="../../../price.html">Daftar Harga</a>
+                        <a href="../../../review.html">Review</a>
+                        <a href="../../../calculator.html">Kalkulator ML</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <div class="eniv-footer-menu">
+                        <b>Tentang</b>
+                        <a href="../../../help.html">Hubungi Kami</a>
+                        <a href="../../../terms.html">Syarat dan Ketentuan</a>
+                        <a href="../../../privacy.html">Kebijakan Privasi</a>
+                        <a href="../../../faq.html">Pertanyaan Umum</a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="eniv-footer-menu">
+                        <b>Bantuan</b>
+                    </div>
+                </div>
+            </div>
+            <div class="eniv-footer-copyright-mobile">
+                Copyright &copy; 2025 Tokoden - All Right Reserved
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
+
+    <script>
+        function logout() {
+            Swal.fire({
+                title: "Anda yakin?",
+                text: "Anda akan logout dari akun",
+                icon: "info",
+                showCancelButton: true,
+                confirmButtonText: "Tetap Logout",
+                cancelButtonText: "Batal"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '/logout'
+                }
+            });
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script>
+        function random_string(length) {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let result = '';
+            for (let i = 0; i < length; i++) {
+                result += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return result;
+        }
+        function hapus(link) {
+
+            Swal.fire({
+                title: "Anda yakin?",
+                text: "Data akan dihapus secara permanen",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Tetap Hapus",
+                cancelButtonText: "Batal",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = link;
+                }
+            });
+        }
+
+        function menu_admin_hide() {
+
+            var div = $(".eniv-admin-menu");
+            gsap.to(div, { duration: .2, opacity: 0 });
+            setTimeout(function () {
+                div.css('display', 'none')
+            }, 200);
+        }
+
+        $(".eniv-navbar-admin-toggle").on('click', function () {
+
+            const currentPath = window.location.pathname;
+
+            if (!currentPath.includes('/admin')) {
+                window.location.href = '/admin';
+            } else {
+
+                menu_user_hide();
+
+                if ($(".eniv-admin-menu").css('display') == 'none') {
+                    var div = $(".eniv-admin-menu").css('display', 'flex');
+                    gsap.to(div, { duration: .2, opacity: 1 });
+                } else {
+                    menu_admin_hide();
+                }
+            }
+        });
+    </script>
+
+
+
+    <script>
+
+        var base_url = '/';
+
+        function salin(text, message) {
+
+            navigator.clipboard.writeText(text);
+
+            Swal.fire('Berhasil', message, 'success');
+        }
+
+        function filterList(keyword) {
+
+            keyword = keyword.toLowerCase();
+
+            $('.eniv-pricelist-games li').each(function () {
+
+                const itemText = $(this).find('span').text().toLowerCase();
+
+                if (itemText.includes(keyword)) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        }
+
+        function menu_user_hide() {
+
+            var div = $(".eniv-navbar-center-menu-mobile");
+            gsap.to(div, { duration: .2, opacity: 0 });
+            setTimeout(function () {
+                div.css('display', 'none')
+            }, 200);
+        }
+
+        $(".eniv-navbar-start-toggle").on('click', function () {
+
+            menu_admin_hide();
+
+            if ($(".eniv-navbar-center-menu-mobile").css('display') == 'none') {
+                var div = $(".eniv-navbar-center-menu-mobile").css('display', 'block');
+                gsap.to(div, { duration: .2, opacity: 1 });
+            } else {
+                menu_user_hide();
+            }
+        });
+    </script>
+
+    <script>
+        $("#datatable").DataTable({
+            pageLength: 25,
+            ordering: false,
+        });
+    </script>
+
+</body>
+
+</html>
